@@ -6,6 +6,7 @@ namespace App\Controllers;
 class Newcontroller extends \CodeIgniter\Controller
 {
     private $menu_model;
+    private $database_model;
     private $data;
 
     /**
@@ -13,6 +14,7 @@ class Newcontroller extends \CodeIgniter\Controller
      */
     public function __construct() {
         $this->menu_model = new \Menu_model();
+        $this->database_model = new \Database_model();
     }
 
     public function home() {
@@ -21,6 +23,10 @@ class Newcontroller extends \CodeIgniter\Controller
     }
 
     public function about() {
+        $items = $this->database_model->get_data();
+        $data2['items'] = $items;
+        $this->data['content'] = view('list', $data2);
+
         $this->data['menu_items'] = $this->menu_model->get_menuitems('about');
         return view ('about', $this->data);
     }
