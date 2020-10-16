@@ -15,6 +15,7 @@ class Menu_model
             array('name' => 'home', 'title' => 'home', 'link' => 'home', 'className' => 'active') ,
             array('name' => 'about', 'title' => 'about', 'link' => 'about', 'className' => 'inactive'),
             array('name' => 'contact', 'title' => 'contact', 'link' => 'contact', 'className' => 'inactive') ,
+            array('name' => 'vue', 'title' => 'vue', 'link' => 'vue', 'className' => 'inactive') ,
         );
     }
 

@@ -1,0 +1,18 @@
+Index: app/Views/main.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"<?=base_url()?>/public/stylesheets/main.css\">\r\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"<?=base_url()?>/public/stylesheets/navbar.css\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n<header class=\"navbar\">\r\n    <a class=\"app_name\" href=\"home\">\r\n        <span class=\"app_name_title\"> snAPP </span>\r\n    </a>\r\n    <nav class=\"header_nav\">\r\n        <ul class=\"header_nav_list\">\r\n            <?php foreach ($menu_items as $menu): ?>\r\n                <li class=\"header_nav_list_item\"><a href=\"<?=$menu['link']?>\" title=\"<?=$menu['title']?>\" class=\"header_nav_list_item_link\"><?=$menu['name']?></a></li>\r\n            <?php endforeach; ?>\r\n        </ul>\r\n    </nav>s\r\n</header>\r\n\r\n<main>\r\n    <nav>\r\n        <div class=\"flex_container\">\r\n            <div class=\"flex_item\" id=\"0\">\r\n                <img class=\"image\" src=\"<?=base_url()?>/public/images/ash.jpg\" alt=\"\">\r\n            </div>\r\n            <div class=\"flex_item\" id=\"1\">\r\n                <img class=\"image\" src=\"<?=base_url()?>/public/images/Binr.jpg\" alt=\"\">\r\n            </div>\r\n            <div class=\"flex_item\" id=\"2\">\r\n                <img class=\"image\" src=\"<?=base_url()?>/public/images/chestnut.jpg\" alt=\"\">\r\n            </div>\r\n            <div class=\"flex_item\" id=\"3\">\r\n                <img class=\"image\" src=\"<?=base_url()?>/public/images/forester.jpg\" alt=\"\">\r\n            </div>\r\n            <div class=\"flex_item\" id=\"4\">\r\n                <img class=\"image\" src=\"<?=base_url()?>/public/images/tanzania.jpg\" alt=\"\">\r\n            </div>\r\n        </div>\r\n    </nav>\r\n    <p>First iteration of our web page!</p>\r\n</main>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Views/main.php	(revision dd94d9a838d66f7f7be2cc30a1452c22fc4c9976)
++++ app/Views/main.php	(date 1602842644778)
+@@ -3,7 +3,7 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <link rel="stylesheet" type="text/css" href="<?=base_url()?>/public/stylesheets/main.css">
++    <link rel="stylesheet" type="text/css" href="/public/stylesheets/main.css">
+     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/public/stylesheets/navbar.css">
+     <title>Title</title>
+ </head>

@@ -30,5 +30,8 @@ class Newcontroller extends \CodeIgniter\Controller
         return view('contact', $this->data);
     }
 
-
+    public function vue() {
+        $this->data['menu_items'] = $this->menu_model->get_menuitems('vue');
+        return view('vue.html', $this->data);
+    }
 }
