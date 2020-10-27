@@ -1,0 +1,52 @@
+CRITICAL - 2020-10-27 05:51:27 --> syntax error, unexpected '$routes' (T_VARIABLE)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:51:45 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:51:46 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:18 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:19 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:20 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:25 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:25 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:52:37 --> syntax error, unexpected 'if' (T_IF)
+#0 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#2 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#3 {main}
+CRITICAL - 2020-10-27 05:59:25 --> Undefined property: CodeIgniter\CodeIgniter::$uri
+#0 /home/a20ux1/www/html/app/Config/Routes.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(780): require('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
