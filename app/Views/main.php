@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/public/stylesheets/main.css">
-    <link rel="stylesheet" type="text/css" href="/public/stylesheets/navbar.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url()?>/stylesheets/navbar.css">
     <title>Title</title>
 </head>
 <body>
@@ -26,19 +26,19 @@
     <nav>
         <div class="flex_container">
             <div class="flex_item" id="0">
-                <img class="image" src="/public/images/ash.jpg" alt="">
+                <img class="image" src="<?= base_url()?>/images/ash.jpg" alt="">
             </div>
             <div class="flex_item" id="1">
-                <img class="image" src="/public/images/Binr.jpg" alt="">
+                <img class="image" src="<?= base_url()?>/images/Binr.jpg" alt="">
             </div>
             <div class="flex_item" id="2">
-                <img class="image" src="/public/images/chestnut.jpg" alt="">
+                <img class="image" src="<?= base_url()?>/images/chestnut.jpg" alt="">
             </div>
             <div class="flex_item" id="3">
-                <img class="image" src="/public/images/forester.jpg" alt="">
+                <img class="image" src="<?= base_url()?>/images/forester.jpg" alt="">
             </div>
             <div class="flex_item" id="4">
-                <img class="image" src="/public/images/tanzania.jpg" alt="">
+                <img class="image" src="<?= base_url()?>/images/tanzania.jpg" alt="">
             </div>
         </div>
     </nav>

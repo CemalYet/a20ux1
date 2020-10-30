@@ -21,7 +21,7 @@ class App extends BaseConfig
 	| environments.
 	|
 	*/
-	public $baseURL = 'http://a20ux1.studev.groept.be/';
+	public $baseURL = 'https://a20ux1.studev.groept.be/public';
 
 	/*
 	|--------------------------------------------------------------------------

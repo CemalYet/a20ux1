@@ -1,0 +1,123 @@
+CRITICAL - 2020-10-16 00:38:29 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 01:58:53 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 02:27:38 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 02:28:17 --> Invalid file: vue.hmtl
+#0 /home/a20ux1/www/html/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /home/a20ux1/www/html/app/Controllers/Newcontroller.php(35): view()
+#3 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Newcontroller->vue()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#6 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-10-16 02:31:51 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:07:25 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:07:43 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:09:24 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:14:13 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:14:30 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:14:35 --> Undefined variable: menu_items
+#0 /home/a20ux1/www/html/app/Views/main.php(18): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/View/View.php(246): include('/home/a20ux1/ww...')
+#2 /home/a20ux1/www/html/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /home/a20ux1/www/html/app/Controllers/Home.php(12): view()
+#4 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Home->index()
+#5 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-16 03:18:47 --> Undefined property: App\Controllers\Newcontroller::$load
+#0 /home/a20ux1/www/html/app/Controllers/Newcontroller.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Newcontroller->vue()
+#2 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-16 03:21:29 --> Undefined property: App\Controllers\Newcontroller::$load
+#0 /home/a20ux1/www/html/app/Controllers/Newcontroller.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /home/a20ux1/www/html/system/CodeIgniter.php(918): App\Controllers\Newcontroller->vue()
+#2 /home/a20ux1/www/html/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /home/a20ux1/www/html/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/a20ux1/www/html/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

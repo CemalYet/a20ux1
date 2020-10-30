@@ -16,8 +16,8 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
+$routes->setDefaultController('Newcontroller');
+$routes->setDefaultMethod('home');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -30,7 +30,11 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Newcontroller::home');
+$routes->get('/home', 'Newcontroller::home');
+$routes->get('/about', 'Newcontroller::about');
+$routes->get('/contact', 'Newcontroller::contact');
+$routes->get('/vue', 'Newcontroller::vue');
 
 /**
  * --------------------------------------------------------------------
