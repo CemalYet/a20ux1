@@ -27,16 +27,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aaecc82d-afee-4fee-be70-f92edbe9c75a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/a20ux1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/a20ux1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Config/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/vue.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/Views/vue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.9b3a8957.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.9b3a8957.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.ebaa5520.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.ebaa5520.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.ae46386b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.ae46386b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.f2d3d83b.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chunk-vendors.f2d3d83b.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,20 +66,15 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.env" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lijne\Documents\intelliJ\a20ux1\public" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://a20ux1.studev.groept.be/public/index.php">
       <method v="2" />
     </configuration>
@@ -112,7 +101,8 @@
       <workItem from="1602839668703" duration="3402000" />
       <workItem from="1602843131093" duration="341000" />
       <workItem from="1603964913356" duration="687000" />
-      <workItem from="1604047901923" duration="10477000" />
+      <workItem from="1604047901923" duration="11003000" />
+      <workItem from="1604066978202" duration="3155000" />
     </task>
     <task id="LOCAL-00001" summary="commit: codeigniter version of studef, also working on localhost if uwamp directory is set to C:\Users\lijne\Documents\intelliJ\a20ux1 (into project folder)">
       <created>1602842927164</created>
@@ -135,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604054458848</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed routing v3">
+      <created>1604066609664</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604066609664</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +166,8 @@
     <MESSAGE value="commit: codeigniter version of studef, also working on localhost if uwamp directory is set to C:\Users\lijne\Documents\intelliJ\a20ux1 (into project folder)" />
     <MESSAGE value="changed routing" />
     <MESSAGE value="changed routing v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed routing v2" />
+    <MESSAGE value="changed routing v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed routing v3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1604063976704">
@@ -200,18 +198,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602842379396" />
+    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1604066646366">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604066646366" />
     <state x="743" y="222" key="RollbackChangesDialog" timestamp="1602836036606">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602836036606" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602842961714">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604066617565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602842961714" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602842302018">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604066617565" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604066996474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602842302018" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604066996474" />
     <state x="777" y="250" key="ftp.server.browser" timestamp="1604055034751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
