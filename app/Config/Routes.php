@@ -35,6 +35,8 @@ $routes->get('/home', 'Newcontroller::home');
 $routes->get('/about', 'Newcontroller::about');
 $routes->get('/contact', 'Newcontroller::contact');
 $routes->get('/vue', 'Newcontroller::vue');
+$routes->get('/loginpage', 'Newcontroller::loginpage');
+$routes->get('/registrationstepone', 'Newcontroller::registrationstepone');
 
 /**
  * --------------------------------------------------------------------

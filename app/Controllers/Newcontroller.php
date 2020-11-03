@@ -40,4 +40,24 @@ class Newcontroller extends \CodeIgniter\Controller
         $this->data['menu_items'] = $this->menu_model->get_menuitems('vue');
         return view('vue.html', $this->data);
     }
+
+    public function loginpage() {
+        return view('loginpage.php');
+    }
+
+    public function registrationstepone() {
+        return view('registrationstepone.php');
+    }
+
+    public function registrationsteptwo() {
+        return view('registrationsteptwo.php');
+    }
+
+    public function registrationstepthree() {
+        return view('registrationstepthree.php');
+    }
+
+    public function registrationdone() {
+        return view('registrationdone.php');
+    }
 }
