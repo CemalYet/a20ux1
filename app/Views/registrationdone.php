@@ -12,11 +12,10 @@
 
     <h1 class="alldone"> All done! </h1>
 
-
     <p class="text1"> Enjoy your time using snAPP </p>
 
     <div class="alldonebox">
-        <button class="alldonebutton" type="button"> OK </button>
+        <button class="alldonebutton" onclick="window.location.href='/login/index'"><strong>OK</strong></button>
     </div>
 
 </body>

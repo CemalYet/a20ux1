@@ -11,28 +11,34 @@
 <body>
     <h1 class="registrationtitle"> Registration </h1>
 
-    <div class="inputs">
-        <div class="text-box">
-            <input class="inputsregistration" type="text" placeholder="username" name="" value="">
+    <form class="" action="/register/save" method="POST">
+        <div class="inputs">
+            <div class="text-box">
+                <input class="inputsregistration" type="text" placeholder="Username" name="username" value="<?= set_value('username') ?>">
+            </div>
+
+            <div class="text-box">
+                <input class="inputsregistration" type="text" placeholder="Email address" name="email"  value="<?= set_value('email') ?>">
+            </div>
+
+            <div class="text-box">
+                <input class="inputsregistration" type="password" placeholder="Password" name="password" value="">
+            </div>
+
+            <div class="text-box">
+                <input class="inputsregistration" type="password" placeholder="Confirm password" name="password_confirm" value="">
+            </div>
+
+            <?php if(isset($validation)):?>
+                <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
+            <?php endif;?>
+
         </div>
 
-        <div class="text-box">
-            <input class="inputsregistration" type="text" placeholder="email address" name="" value="">
+        <div class="buttons">
+            <button type="button" class="button" onclick="window.location.href='/registrationsteptwo'"><strong>NEXT</strong></button>
         </div>
-
-        <div class="text-box">
-            <input class="inputsregistration" type="text" placeholder="password" name="" value="">
-        </div>
-
-        <div class="text-box">
-            <input class="inputsregistration" type="text" placeholder="repeat password" name="" value="">
-        </div>
-    </div>
-
-    <div class="buttons">
-        <button type="button" class="button" onclick="window.location.href='<?php echo base_url()?>/index.php/newcontroller/registrationsteptwo'"><strong>NEXT</strong></button>
-    </div>
-
+    </form>
 
 </body>
 

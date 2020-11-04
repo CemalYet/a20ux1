@@ -128,7 +128,7 @@ class UserAgent
 	/**
 	 * Constructor
 	 *
-	 * Sets the User Agent and runs the compilation routine
+	 * Sets the Register Agent and runs the compilation routine
 	 *
 	 * @param null|\Config\UserAgents $config
 	 */
@@ -362,7 +362,7 @@ class UserAgent
 	//--------------------------------------------------------------------
 
 	/**
-	 * Compile the User Agent Data
+	 * Compile the Register Agent Data
 	 *
 	 * @return void
 	 */

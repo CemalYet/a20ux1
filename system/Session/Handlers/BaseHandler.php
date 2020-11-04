@@ -122,7 +122,7 @@ abstract class BaseHandler implements \SessionHandlerInterface
 	protected $savePath;
 
 	/**
-	 * User's IP address.
+	 * Register's IP address.
 	 *
 	 * @var string
 	 */

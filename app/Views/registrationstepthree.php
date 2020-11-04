@@ -29,11 +29,9 @@
     </div>
 
     <div class="buttons">
-        <button class="button" onclick="window.location.href='<?php echo base_url()?>/index.php/newcontroller/registrationdone'"><strong>NO THANKS</strong></button>
-        <button class="button" onclick="window.location.href='<?php echo base_url()?>/index.php/newcontroller/registrationdone'"><strong>NEXT</strong></button>
+        <button class="button" onclick="window.location.href='/registrationdone'"><strong>NO THANKS</strong></button>
+        <button type="button" class="button" onclick="window.location.href='/registrationdone'"><strong>NEXT</strong></button>
     </div>
-
-
 </body>
 
 </html>

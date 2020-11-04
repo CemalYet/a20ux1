@@ -85,14 +85,14 @@ class URI
 	protected $scheme = 'http';
 
 	/**
-	 * URI User Info
+	 * URI Register Info
 	 *
 	 * @var string
 	 */
 	protected $user;
 
 	/**
-	 * URI User Password
+	 * URI Register Password
 	 *
 	 * @var string
 	 */

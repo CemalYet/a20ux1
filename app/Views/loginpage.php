@@ -10,22 +10,28 @@
 
 <body>
     <h1 class="loginpagetitle"> snAPP </h1>
-
     <img class="loginpageimg" src="<?= base_url()?>/images/whiteTree.png" alt="White Tree">
-    <div class="inputs">
-        <div class="text-box">
-            <input type="text" placeholder="username" name="" value="">
+
+    <?php if(session()->getFlashdata('msg')):?>
+        <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
+    <?php endif;?>
+
+    <form class="" action="/login/auth" method="post">
+        <div class="inputs">
+            <div class="text-box">
+                <input type="text" placeholder="Username" name="username" id="username" value="<?= set_value('username') ?>">
+            </div>
+
+            <div class="text-box">
+                <input type="password" placeholder="Password" name="password" id="password" value="">
+            </div>
         </div>
 
-        <div class="text-box">
-            <input type="text" placeholder="password" name="" value="">
+        <div class="buttons">
+            <button type="submit" class="button"><strong>LOG IN</strong></button>
+            <button type="button" class="button" onclick="window.location.href='/register'"><strong>REGISTER</strong></button>
         </div>
-    </div>
-
-    <div class="buttons">
-        <button type="button" class="button" onclick="window.location.href='<?php echo base_url()?>/index.php/newcontroller/registrationstepone'"><strong>REGISTER</strong></button>
-        <button type="button" class="button"><strong>LOG IN</strong></button>
-    </div>
+    </form>
 </body>
 
 </html>

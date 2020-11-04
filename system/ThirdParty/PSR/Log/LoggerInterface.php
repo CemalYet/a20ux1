@@ -83,7 +83,7 @@ interface LoggerInterface
     /**
      * Interesting events.
      *
-     * Example: User logs in, SQL logs.
+     * Example: Register logs in, SQL logs.
      *
      * @param string $message
      * @param array $context
