@@ -11,7 +11,7 @@
 <body>
     <h1 class="registrationtitle"> Registration </h1>
 
-    <form class="" action="/register/save" method="POST">
+    <form class="" action="/register/save" method="post">
         <div class="inputs">
             <div class="text-box">
                 <input class="inputsregistration" type="text" placeholder="Username" name="username" value="<?= set_value('username') ?>">
@@ -36,7 +36,7 @@
         </div>
 
         <div class="buttons">
-            <button type="button" class="button" onclick="window.location.href='/registrationsteptwo'"><strong>NEXT</strong></button>
+            <button type="submit" class="button"><strong>NEXT</strong></button>
         </div>
     </form>
 

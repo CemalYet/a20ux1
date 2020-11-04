@@ -20,7 +20,7 @@ class Register extends \CodeIgniter\Controller
 
         //set rules validation form
         $rules = [
-            'username' => 'required|min_length[3]|max_length[20]',
+            'username' => 'required|min_length[3]|max_length[20]|is_unique[UserTable.userName]',
             'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[UserTable.emailAddress]',
             'password' => 'required|min_length[8]|max_length[255]',
             'password_confirm' => 'matches[password]'
