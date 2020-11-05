@@ -29,10 +29,11 @@
                 <input class="inputsregistration" type="password" placeholder="Confirm password" name="password_confirm" value="">
             </div>
 
-            <?php if(isset($validation)):?>
-                <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
-            <?php endif;?>
-
+            <?php if (isset($validation)): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $validation->listErrors() ?>
+                </div>
+            <?php endif; ?>
         </div>
 
         <div class="buttons">

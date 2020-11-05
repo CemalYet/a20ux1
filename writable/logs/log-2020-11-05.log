@@ -98,3 +98,43 @@ CRITICAL - 2020-11-05 09:56:54 --> There is no data to update.
 #4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2020-11-05 10:06:37 --> Undefined variable: validation
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Views\registrationstepone.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Julie\\...', 33, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(246): include('C:\\Users\\Julie\\...')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('registrationste...', Array, true)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(13): view('registrationste...', Array)
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->index()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-05 10:06:37 --> Undefined variable: validation
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Views\registrationstepone.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Julie\\...', 33, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(246): include('C:\\Users\\Julie\\...')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('registrationste...', Array, true)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(13): view('registrationste...', Array)
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->index()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-05 10:16:36 --> Array to string conversion
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Views\registrationstepone.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\Julie\\...', 32, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(246): include('C:\\Users\\Julie\\...')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('registrationste...', Array, true)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(48): view('registrationste...')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->save()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-05 10:18:09 --> Undefined variable: validation
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Views\registrationstepone.php(32): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\Julie\\...', 32, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(246): include('C:\\Users\\Julie\\...')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('registrationste...', Array, true)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(13): view('registrationste...', Array)
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->index()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

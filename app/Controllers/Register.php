@@ -41,11 +41,11 @@ class Register extends \CodeIgniter\Controller
 
             return redirect()->to('/public/registrationsteptwo');
         }
-
         else{
             $data['validation'] = $this->validator;
-            return redirect()->to('/public/register');
         }
+
+        echo view('registrationstepone');
     }
 
     public function registrationsteptwo() {
