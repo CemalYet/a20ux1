@@ -21,8 +21,8 @@
         <span class="checkmark"></span>
     </label>
     <div class="buttons">
-        <button type="button" class="button" onclick="window.location.href='/registrationstepthree'"><strong>NO THANKS</strong></button>
-        <button type="button" class="button" onclick="window.location.href='/registrationstepthree'"><strong>NEXT</strong></button>
+        <button type="button" class="button" onclick="window.location.href='/public/registrationstepthree'"><strong>NO THANKS</strong></button>
+        <button type="button" class="button" onclick="window.location.href='/public/registrationstepthree'"><strong>NEXT</strong></button>
     </div>
 
 

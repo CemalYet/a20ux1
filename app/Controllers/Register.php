@@ -29,9 +29,9 @@ class Register extends \CodeIgniter\Controller
         if($this->validate($rules)){
             $model = new User_model();
             $data = [
-                'userName'      => $this->request->getVar('name'),
+                'userName'      => $this->request->getVar('username'),
                 'emailAddress'  => $this->request->getVar('email'),
-                'passHash'      => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
+                'passHash'      => $this->request->getVar('password')
             ];
 
             $model->save($data);
@@ -39,12 +39,12 @@ class Register extends \CodeIgniter\Controller
             //$session = session();
             //$session->setFlashdata('success', 'Successful Registration');
 
-            return redirect()->to('/registrationsteptwo');
+            return redirect()->to('/public/registrationsteptwo');
         }
 
         else{
             $data['validation'] = $this->validator;
-            return redirect()->to('/registrationstepone');
+            return redirect()->to('/public/register');
         }
     }
 

@@ -130,6 +130,29 @@ input {
     margin: 2px 5px;
 }
 
+/*
+.dayButton {
+    position: absolute;
+    opacity: 0;
+.dayButton + label {
+      display: block;
+      padding: .4em .8em;
+      line-height: 1;
+      color: #fff;
+      background-color: #444;
+(.dayButton + label):hover, (.dayButton + label):focus, (.dayButton + label):active {
+                       background-color: #DDE3ED;
+                       color:  #333;
+                   }
+}
+.dayButton:checked + label {
+     background-color: #DDE3ED;
+     color:  #333;
+(.dayButton:checked + label):hover, (.dayButton:checked + label):focus, (.dayButton:checked + label):active { background-color: #eee; }
+}
+}
+*/
+
 .alldone {
     font-family: Lato;
     font-size: 32px;
@@ -145,6 +168,17 @@ input {
     border-radius: 50%;
     border: 2px solid white;
     color: white;
+    font-size: 24px;
+    font-family: Lato;
+}
+
+.alldonebutton:focus {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: #004D40;
     font-size: 24px;
     font-family: Lato;
 }

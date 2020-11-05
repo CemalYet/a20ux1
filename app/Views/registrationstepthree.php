@@ -25,12 +25,43 @@
             <button type="button"><strong> Su </strong></button>
         </div>
 
+        <!--        <div class="daybuttons">
+                    <div>
+                        <input class="daybutton" type="checkbox" name="monday">
+                        <label for="monday">Option 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="tuesday">
+                        <label for="tuesday">Option 2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="wednesday">
+                        <label for="wednesday">Option 3</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="thursday">
+                        <label for="thursday">Option 1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="friday">
+                        <label for="friday">Option 2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="saturday">
+                        <label for="saturday">Option 3</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="daybutton" name="sunday">
+                        <label for="sunday">Option 3</label>
+                    </div>
+                </div>-->
+
         <p class="text2"> You can always change this again later, no pressure ;) </p>
     </div>
 
     <div class="buttons">
-        <button class="button" onclick="window.location.href='/registrationdone'"><strong>NO THANKS</strong></button>
-        <button type="button" class="button" onclick="window.location.href='/registrationdone'"><strong>NEXT</strong></button>
+        <button class="button" onclick="window.location.href='/public/registrationdone'"><strong>NO THANKS</strong></button>
+        <button type="button" class="button" onclick="window.location.href='/public/registrationdone'"><strong>NEXT</strong></button>
     </div>
 </body>
 

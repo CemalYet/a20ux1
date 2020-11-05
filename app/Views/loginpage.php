@@ -13,10 +13,10 @@
     <img class="loginpageimg" src="<?= base_url()?>/images/whiteTree.png" alt="White Tree">
 
     <?php if(session()->getFlashdata('msg')):?>
-        <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
+        <div class="alert alert-danger" ><?= session()->getFlashdata('msg') ?></div>
     <?php endif;?>
 
-    <form class="" action="/login/auth" method="post">
+    <form class="" action="/public/login/auth" method="post">
         <div class="inputs">
             <div class="text-box">
                 <input type="text" placeholder="Username" name="username" id="username" value="<?= set_value('username') ?>">
@@ -29,7 +29,7 @@
 
         <div class="buttons">
             <button type="submit" class="button"><strong>LOG IN</strong></button>
-            <button type="button" class="button" onclick="window.location.href='/register'"><strong>REGISTER</strong></button>
+            <button type="button" class="button" onclick="window.location.href='/public/register'"><strong>REGISTER</strong></button>
         </div>
     </form>
 </body>

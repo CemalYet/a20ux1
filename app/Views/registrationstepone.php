@@ -11,7 +11,7 @@
 <body>
     <h1 class="registrationtitle"> Registration </h1>
 
-    <form class="" action="/register/save" method="post">
+    <form class="" action="/public/register/save" method="post">
         <div class="inputs">
             <div class="text-box">
                 <input class="inputsregistration" type="text" placeholder="Username" name="username" value="<?= set_value('username') ?>">

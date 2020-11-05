@@ -29,16 +29,16 @@ class Login extends Controller
                     'loggedIn'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/profile');
+                return redirect()->to('/public/profile');
             }
             else{
                 $session->setFlashdata('msg', 'Wrong Password');
-                return redirect()->to('/login');
+                return redirect()->to('/public/login');
             }
         }
         else{
             $session->setFlashdata('msg', 'Username not Found');
-            return redirect()->to('/login');
+            return redirect()->to('/public/login');
         }
     }
 
@@ -46,6 +46,6 @@ class Login extends Controller
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/public/login');
     }
 }
