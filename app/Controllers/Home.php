@@ -3,6 +3,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Discovery_model;
+
 class Home extends \CodeIgniter\Controller
 {
     private $menu_model;
@@ -14,7 +16,7 @@ class Home extends \CodeIgniter\Controller
      */
     public function __construct() {
         $this->menu_model = new \Menu_model();
-        $this->database_model = new \Database_model();
+        $this->database_model = new Discovery_model();
     }
 
     public function home() {
