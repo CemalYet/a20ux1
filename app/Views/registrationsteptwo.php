@@ -16,14 +16,22 @@
 
         <p class="text2"> Don't worry, we won't sell your location like those other nasty social media platforms ;) </p>
     </div>
-    <label class="container"> I agree to let this app use my location
-        <input type="checkbox" checked="checked">
-        <span class="checkmark"></span>
+    <label class="container">
+        <form action="/public/register/getUseLocation" method="post">
+            <label class="locationCheck" for="locationCheckbox">
+                I agree to let this app use my location
+                <input type="checkbox" name="locationCheckbox" id="locationCheckbox"/>
+            </label>
+
+            <br>
+
+            <div class="buttons">
+                <button type="submit" class="button"><strong>NEXT</strong></button>
+            </div>
+
+        </form>
     </label>
-    <div class="buttons">
-        <button type="button" class="button" onclick="window.location.href='/public/registrationstepthree'"><strong>NO THANKS</strong></button>
-        <button type="button" class="button" onclick="window.location.href='/public/registrationstepthree'"><strong>NEXT</strong></button>
-    </div>
+
 
 
 </body>

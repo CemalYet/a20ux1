@@ -29,6 +29,8 @@
                 <input class="inputsregistration" type="password" placeholder="Confirm password" name="password_confirm" value="">
             </div>
 
+            <br>
+
             <?php if (isset($validation)): ?>
                 <div class="alert alert-danger" role="alert">
                     <?= $validation->listErrors() ?>

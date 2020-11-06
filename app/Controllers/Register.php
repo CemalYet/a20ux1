@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\User_model;
+use App\Models\Reminder_model;
 
 class Register extends \CodeIgniter\Controller
 {
@@ -27,16 +28,24 @@ class Register extends \CodeIgniter\Controller
         ];
 
         if($this->validate($rules)){
+            $session = session();
             $model = new User_model();
             $data = [
                 'userName'      => $this->request->getVar('username'),
                 'emailAddress'  => $this->request->getVar('email'),
                 'passHash'      => $this->request->getVar('password')
             ];
-
             $model->save($data);
 
-            //$session = session();
+            $newData = $model->where('userName', $data['userName'])->first();
+            $ses_data = [
+                'userId'       => $newData['userId'],
+                'userName'     => $newData['userName'],
+                'emailAddress' => $newData['emailAddress'],
+                'loggedIn'     => TRUE
+            ];
+            $session->set($ses_data);
+
             //$session->setFlashdata('success', 'Successful Registration');
 
             return redirect()->to('/public/registrationsteptwo');
@@ -45,15 +54,54 @@ class Register extends \CodeIgniter\Controller
             $data['validation'] = $this->validator;
         }
 
-        echo view('registrationstepone');
+        echo view('registrationstepone', $data);
     }
 
     public function registrationsteptwo() {
         return view('registrationsteptwo');
     }
 
+    public function getUseLocation() {
+        $model = new User_model();
+        $session = session();
+
+        if(isset($_POST['locationCheckbox'])){
+            $locationCheck = 1;
+        }
+        else {
+            $locationCheck = 0;
+        }
+
+        $data = [
+            'userId'      => $session->get('userId'),
+            'useLocation' => $locationCheck
+        ];
+
+        $model->save($data);
+
+        return redirect()->to('/public/registrationstepthree');
+    }
+
     public function registrationstepthree() {
         return view('registrationstepthree');
+    }
+
+    public function getDays() {
+        $model = new Reminder_model();
+        $session = session();
+
+        if(isset($_POST['days'])){
+            $reminders = $_POST['days'];
+            foreach ($reminders as $value) {
+                $data = [
+                    'userIdFk'    => $session->get('userId'),
+                    'day'         => "$value"
+                ];
+                $model->save($data);
+            }
+        }
+
+        return redirect()->to('/public/registrationdone');
     }
 
     public function registrationdone() {
