@@ -112,52 +112,50 @@ input {
     padding: 50px 0px 20px 0px;
 }
 
-.daybuttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .alert{
     text-align: center;
     font-size: 16px;
     font-family: Lato;
 }
 
-.daybuttons button {
-    background-color: transparent;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid white;
-    color: white;
-    font-size: 16px;
-    font-family: Lato;
-    margin: 2px 5px;
+.daybuttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
 }
 
-/*
-.dayButton {
+li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.daybutton:not(:checked),
+.daybutton:checked {
     position: absolute;
-    opacity: 0;
-.dayButton + label {
-      display: block;
-      padding: .4em .8em;
-      line-height: 1;
-      color: #fff;
-      background-color: #444;
-(.dayButton + label):hover, (.dayButton + label):focus, (.dayButton + label):active {
-                       background-color: #DDE3ED;
-                       color:  #333;
-                   }
+    left: -9999%;
+    border-radius: 50%;
 }
-.dayButton:checked + label {
-     background-color: #DDE3ED;
-     color:  #333;
-(.dayButton:checked + label):hover, (.dayButton:checked + label):focus, (.dayButton:checked + label):active { background-color: #eee; }
+
+.daybutton + label {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 10px;
 }
+
+.daybutton:checked + label {
+    border: 1px solid white;
+    border-radius: 50%;
+    color: #004d40;
+    background-color: white;
 }
-*/
 
 .alldone {
     font-family: Lato;

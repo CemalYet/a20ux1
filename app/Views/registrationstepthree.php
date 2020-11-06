@@ -15,7 +15,38 @@
     <div class="paragraphbox">
         <p class="text1"> Would you like us to remind you to go on walks on certain days? </p>
 
-        <div class="daybuttons">
+        <ul class="daybuttons">
+            <li >
+                <input class="daybutton" type="checkbox" id="monday" name="monday" value="monday">
+                <label for="monday">Mo</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+                <label for="tuesday">Tu</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+                <label for="wednesday">We</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="thursday" name="thursday" value="thursday">
+                <label for="thursday">Th</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="friday" name="friday" value="friday">
+                <label for="friday">Fr</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="saturday" name="saturday" value="saturday">
+                <label for="saturday">Sa</label>
+            </li>
+            <li>
+                <input class="daybutton" type="checkbox" id="sunday" name="sunday" value="sunday">
+                <label for="sunday">Su</label>
+            </li>
+        </ul>
+
+<!--        <div class="daybuttons">
             <button type="button"><strong> Mo </strong></button>
             <button type="button"><strong> Tu </strong></button>
             <button type="button"><strong> We </strong></button>
@@ -23,7 +54,7 @@
             <button type="button"><strong> Fr </strong></button>
             <button type="button"><strong> Sa </strong></button>
             <button type="button"><strong> Su </strong></button>
-        </div>
+        </div>-->
 
         <!--        <div class="daybuttons">
                     <div>
