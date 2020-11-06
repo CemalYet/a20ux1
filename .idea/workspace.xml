@@ -20,51 +20,12 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:feed_page" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaecc82d-afee-4fee-be70-f92edbe9c75a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Controllers/Feedcontroller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/a20ux1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/a20ux1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Database_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discovery_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/vue.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Views/vue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/chunk-vendors.06b29ad2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.9b3a8957.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.9b3a8957.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.b0294317.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.b0294317.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.e8a2a63e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.e8a2a63e.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.f2d3d83b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.f2d3d83b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604630882.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631027.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631051.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631137.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631150.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631161.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631310.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631341.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631408.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631453.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631491.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631506.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631525.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631533.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631534.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631546.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631589.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631603.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631625.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/writable/debugbar/debugbar_1604631661.json" beforeDir="false" />
-    </list>
+    <list default="true" id="aaecc82d-afee-4fee-be70-f92edbe9c75a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +38,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="cd5b54e99a94b6e35b4a6ab0d8c8a6f62e750763" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,17 +70,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://a20ux1.studev.groept.be/public/index.php">
       <method v="2" />
     </configuration>
@@ -149,7 +99,7 @@
       <workItem from="1604047901923" duration="11003000" />
       <workItem from="1604066978202" duration="3155000" />
       <workItem from="1604478650614" duration="1340000" />
-      <workItem from="1604658359471" duration="11055000" />
+      <workItem from="1604658359471" duration="11412000" />
     </task>
     <task id="LOCAL-00001" summary="commit: codeigniter version of studef, also working on localhost if uwamp directory is set to C:\Users\lijne\Documents\intelliJ\a20ux1 (into project folder)">
       <created>1602842927164</created>
@@ -179,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604066609664</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="axios data transfer">
+      <created>1604675268522</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604675268522</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +153,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="feed_page" />
                       </list>
                     </value>
                   </entry>
@@ -214,7 +171,8 @@
     <MESSAGE value="changed routing" />
     <MESSAGE value="changed routing v2" />
     <MESSAGE value="changed routing v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed routing v3" />
+    <MESSAGE value="axios data transfer" />
+    <option name="LAST_COMMIT_MESSAGE" value="axios data transfer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1604063976704">
@@ -274,10 +232,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602836036606" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604066617565">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604675279803">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604066617565" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604675279803" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604658409064">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
