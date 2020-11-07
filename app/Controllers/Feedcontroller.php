@@ -24,4 +24,9 @@ class Feedcontroller extends BaseController
         echo json_encode($data);
     }
 
+    public function getUserData(){
+        $data = $this->discovery_model->get_user_info();
+        echo json_encode($data);
+    }
+
 }

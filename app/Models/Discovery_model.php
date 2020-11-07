@@ -30,16 +30,12 @@ class Discovery_model extends Model{
         $query_text = 'SELECT a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk WHERE userId=(SELECT DISTINCT userId_2 FROM a20ux1.FriendsTable WHERE userId_1=11);';
         $query = $this->db->query($query_text);
         return $query->getResult();
-
-        /*
-        $query_text = 'SELECT DISTINCT name FROM a20ux1.TestTable;';
-        $query = $this->db->query($query_text);
-        return $query->getResult();
-        */
     }
 
-    public function get_data_limit($nr_of_titles = 3) {
-        $query_text = 'SELECT DISTINCT name FROM a20ux1.TestTable limit' . $nr_of_titles;
+    public function get_user_info() {
+        $session = \Config\Services::session();
+        $session->get('ses_data');
+        $query_text = 'SELECT userName, emailAddress, avatar FROM a20ux1.UserTable WHERE userId = 16;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
