@@ -14,86 +14,49 @@
 
     <div class="paragraphbox">
         <p class="text1"> Would you like us to remind you to go on walks on certain days? </p>
+        <div class="container">
+            <form action="/public/register/getDays" method="post">
+                <ul class="daybuttons">
+                    <li >
+                        <input class="daybutton" type="checkbox" id="monday" name="days[]" value="monday">
+                        <label for="monday">Mo</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="tuesday" name="days[]" value="tuesday">
+                        <label for="tuesday">Tu</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="wednesday" name="days[]" value="wednesday">
+                        <label for="wednesday">We</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="thursday" name="days[]" value="thursday">
+                        <label for="thursday">Th</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="friday" name="days[]" value="friday">
+                        <label for="friday">Fr</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="saturday" name="days[]" value="saturday">
+                        <label for="saturday">Sa</label>
+                    </li>
+                    <li>
+                        <input class="daybutton" type="checkbox" id="sunday" name="days[]" value="sunday">
+                        <label for="sunday">Su</label>
+                    </li>
+                </ul>
 
-        <ul class="daybuttons">
-            <li >
-                <input class="daybutton" type="checkbox" id="monday" name="monday" value="monday">
-                <label for="monday">Mo</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="tuesday" name="tuesday" value="tuesday">
-                <label for="tuesday">Tu</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="wednesday" name="wednesday" value="wednesday">
-                <label for="wednesday">We</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="thursday" name="thursday" value="thursday">
-                <label for="thursday">Th</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="friday" name="friday" value="friday">
-                <label for="friday">Fr</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="saturday" name="saturday" value="saturday">
-                <label for="saturday">Sa</label>
-            </li>
-            <li>
-                <input class="daybutton" type="checkbox" id="sunday" name="sunday" value="sunday">
-                <label for="sunday">Su</label>
-            </li>
-        </ul>
+                <p class="text2"> You can always change this again later, no pressure ;) </p>
 
-<!--        <div class="daybuttons">
-            <button type="button"><strong> Mo </strong></button>
-            <button type="button"><strong> Tu </strong></button>
-            <button type="button"><strong> We </strong></button>
-            <button type="button"><strong> Th </strong></button>
-            <button type="button"><strong> Fr </strong></button>
-            <button type="button"><strong> Sa </strong></button>
-            <button type="button"><strong> Su </strong></button>
-        </div>-->
+                <div class="buttons">
+                    <button type="submit" class="button"><strong>NEXT</strong></button>
+                </div>
+            </form>
+        </div>
 
-        <!--        <div class="daybuttons">
-                    <div>
-                        <input class="daybutton" type="checkbox" name="monday">
-                        <label for="monday">Option 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="tuesday">
-                        <label for="tuesday">Option 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="wednesday">
-                        <label for="wednesday">Option 3</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="thursday">
-                        <label for="thursday">Option 1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="friday">
-                        <label for="friday">Option 2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="saturday">
-                        <label for="saturday">Option 3</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="daybutton" name="sunday">
-                        <label for="sunday">Option 3</label>
-                    </div>
-                </div>-->
-
-        <p class="text2"> You can always change this again later, no pressure ;) </p>
     </div>
 
-    <div class="buttons">
-        <button class="button" onclick="window.location.href='/public/registrationdone'"><strong>NO THANKS</strong></button>
-        <button type="button" class="button" onclick="window.location.href='/public/registrationdone'"><strong>NEXT</strong></button>
-    </div>
 </body>
 
 </html>

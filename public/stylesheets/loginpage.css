@@ -9,12 +9,11 @@ body {
     color: white;
 }
 
-
 .loginpagetitle {
     display: flex;
     justify-content: center;
     font-family: Merriweather;
-    font-size: 100px;
+    font-size: 80px;
     text-decoration: underline;
 }
 
@@ -110,6 +109,7 @@ input {
     font-size: 12px;
     font-family: Lato;
     padding: 50px 0px 20px 0px;
+    text-align: center;
 }
 
 .alert{
@@ -129,7 +129,6 @@ li{
     list-style-type: none;
     list-style-position: outside;
     padding: 10px;
-    border-radius: 50%;
 }
 
 .daybutton:not(:checked),
@@ -141,13 +140,17 @@ li{
 
 .daybutton + label {
     display: inline-block;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     border: 1px solid white;
     border-radius: 50%;
     color: white;
     background-color: transparent;
-    margin-bottom: 10px;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Lato;
 }
 
 .daybutton:checked + label {
@@ -159,7 +162,7 @@ li{
 
 .alldone {
     font-family: Lato;
-    font-size: 32px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     padding-top: 70px;
@@ -167,8 +170,8 @@ li{
 
 .alldonebutton {
     background-color: transparent;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border: 2px solid white;
     color: white;
@@ -178,13 +181,13 @@ li{
 
 .alldonebutton:focus {
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: 2px solid white;
     color: #004D40;
     font-size: 24px;
     font-family: Lato;
+    outline:none;
 }
 
 .alldonebox {
