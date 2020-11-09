@@ -17,7 +17,18 @@ html,body{
 }
 
 main{
-  font-size: 50px;
-  text-align: center;
+    font-size: 50px;
+    text-align: center;
 }
-s
+
+li  {
+    list-style: none;
+    font-size: 25px;
+}
+
+@media (max-width: 750px){
+    main{
+        font-size: 50px;
+        text-align: center;
+    }
+}

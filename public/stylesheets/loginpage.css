@@ -1,0 +1,197 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,37,26,1), rgba(0,77,64,1));
+    color: white;
+}
+
+.loginpagetitle {
+    display: flex;
+    justify-content: center;
+    font-family: Merriweather;
+    font-size: 80px;
+    text-decoration: underline;
+}
+
+.loginpageimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    padding-bottom: 30px;
+}
+
+.text-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 50px 10px 10px;
+    border-bottom: 3px solid white;
+    width: 150px;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.inputs {
+    padding-bottom: 30px;
+}
+
+.buttons {
+    width: 260px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 50px 20px 50px;
+}
+
+.button {
+    font-family: Lato;
+    padding: 5px 20px 5px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    borderradius: 15px;
+    color: #39796B;
+    box-shadow: 5px 5px 10px #1b1b1b;
+
+}
+
+.registrationtitle {
+    display: flex;
+    justify-content: center;
+    font-family: Merriweather;
+    text-decoration: underline;
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+.inputsregistration {
+    padding: 10px 50px 10px 10px;
+}
+
+.text1 {
+    font-family: Lato;
+    text-align: center;
+    padding: 30px 30px 10px 30px;
+}
+
+.text2 {
+    font-family: Lato;
+    text-align: center;
+    padding: 0px 30px 80px 30px;
+    font-size: 12px;
+}
+
+.paragraphbox {
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 12px;
+    font-family: Lato;
+    padding: 50px 0px 20px 0px;
+    text-align: center;
+}
+
+.alert{
+    text-align: center;
+    font-size: 16px;
+    font-family: Lato;
+}
+
+.daybuttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+li{
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 10px;
+}
+
+.daybutton:not(:checked),
+.daybutton:checked {
+    position: absolute;
+    left: -9999%;
+    border-radius: 50%;
+}
+
+.daybutton + label {
+    display: inline-block;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    background-color: transparent;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Lato;
+}
+
+.daybutton:checked + label {
+    border: 1px solid white;
+    border-radius: 50%;
+    color: #004d40;
+    background-color: white;
+}
+
+.alldone {
+    font-family: Lato;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.alldonebutton {
+    background-color: transparent;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    color: white;
+    font-size: 24px;
+    font-family: Lato;
+}
+
+.alldonebutton:focus {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #004D40;
+    font-size: 24px;
+    font-family: Lato;
+    outline:none;
+}
+
+.alldonebox {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}

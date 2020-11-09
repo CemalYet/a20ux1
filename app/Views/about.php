@@ -25,6 +25,7 @@
 
 <main>
     <p style="font-size: 3rem; padding-top: 1em; text-align: center;">About page</p>
+    <p><?= $content?></p>
 </main>
 </body>
 </html>

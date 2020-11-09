@@ -16,8 +16,8 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Newcontroller');
-$routes->setDefaultMethod('home');
+$routes->setDefaultController('Register');
+$routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -30,11 +30,18 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Newcontroller::home');
-$routes->get('/home', 'Newcontroller::home');
-$routes->get('/about', 'Newcontroller::about');
-$routes->get('/contact', 'Newcontroller::contact');
-$routes->get('/vue', 'Newcontroller::vue');
+$routes->get('/', 'Home::home');
+$routes->get('/home', 'Home::home');
+$routes->get('/about', 'Home::about');
+$routes->get('/contact', 'Home::contact');
+$routes->get('/vue', 'Home::vue');
+$routes->match(['get','post'],'/register', 'Register::index');
+$routes->match(['get','post'],'/registrationstepone', 'Register::registrationstepone');
+$routes->match(['get','post'],'/registrationsteptwo', 'Register::registrationsteptwo');
+$routes->match(['get','post'],'/registrationstepthree', 'Register::registrationstepthree');
+$routes->match(['get','post'],'/registrationdone', 'Register::registrationdone');
+$routes->match(['get','post'],'/login', 'Login::index');
+$routes->get('/profile', 'Profile::index',['filter' => 'auth']);
 
 /**
  * --------------------------------------------------------------------
