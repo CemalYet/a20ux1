@@ -39,7 +39,7 @@ class ShareController extends BaseController
             'location' => $this->JSON_DATA['my_location'],
             'description' => $this->JSON_DATA['my_description'],
             'leafId' => $this->JSON_DATA['my_leaf'],
-            'userIdFk' => "29",
+            'userIdFk' => "32",
         ];
         $data['takenDate'] = $data['date'] . ' ' . $data['hour'];
 

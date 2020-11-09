@@ -8,7 +8,7 @@ class Share_model extends Model
 {
     protected $table = 'DiscoveryTable';
     protected $primaryKey = 'discoveryId';
-    protected $allowedFields = ['discoveryId', 'userIdFk', 'photoPath', 'takenDate', 'plantIdFk', 'location', 'title', 'leafId'];
+    protected $allowedFields = ['discoveryId', 'userIdFk', 'photoPath', 'takenDate', 'plantIdFk', 'GPSLocation', 'title', 'leafId', 'description', 'location'];
     protected $beforeInsert = ['beforeInsert'];
     protected $beforeUpdate = ['beforeUpdate'];
 
@@ -30,7 +30,7 @@ class Share_model extends Model
     public function upload_data($data) {
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "INSERT INTO a20ux1.DiscoveryTable (userIdFk, takenDate, title, leafId) VALUES ('{$data['userIdFk']}', '{$data['takenDate']}', '{$data['title']}', '{$data['leafId']}');";
+        $query_text = "INSERT INTO a20ux1.DiscoveryTable (userIdFk, takenDate, location, title, leafId, description) VALUES ('{$data['userIdFk']}', '{$data['takenDate']}', '{$data['location']}', '{$data['title']}', '{$data['leafId']}', '{$data['description']}');";
         $this->db->query($query_text);
     }
 }
