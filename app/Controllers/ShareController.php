@@ -8,17 +8,15 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 
 
 use App\Models\Share_model;
-use CodeIgniter\CLI\Console;
 
 class ShareController extends BaseController
 {
     private $share_model;
-    private $db;
 
     public function __construct()
     {
         $this->share_model = new Share_model();
-        $this->db = \Config\Database::connect();
+        $this->JSON_DATA = (array)json_decode(file_get_contents("php://input"));
     }
 
     public function share()
@@ -34,33 +32,19 @@ class ShareController extends BaseController
 
     public function save()
     {
-        $json = $this->request->getJSON();
         $data = [
-            'title' => $json->my_title,
-            'hour' => $json->my_time,
-            'date' => $json->my_date,
-            'location' => $json->my_location,
-            'description' => $json->my_description
+            'title' => $this->JSON_DATA['my_title'],
+            'hour' => $this->JSON_DATA['my_time'],
+            'date' => $this->JSON_DATA['my_date'],
+            'location' => $this->JSON_DATA['my_location'],
+            'description' => $this->JSON_DATA['my_description'],
+            'leafId' => $this->JSON_DATA['my_leaf'],
+            'userIdFk' => "29",
         ];
-        try {
-            $this->share_model->insert(['title' => "Tree", 'date' => "Today"]);
-        } catch (\ReflectionException $e) {
-        }
+        $data['takenDate'] = $data['date'] . ' ' . $data['hour'];
 
-        $data_array = array(
-            ':title' => $json->my_title,
-            ':hour' => $json->my_time,
-            ':date' => $json->my_date,
-            ':location' => $json->my_location,
-            ':description' => $json->my_description
-        );
+        $this->share_model->upload_data($data);
 
-        $session = \Config\Services::session();
-        $session->get('ses_data');
-        $query_text = 'INSERT INTO a20ux1.DiscoveryTable (userIdFk, title) VALUES (19, :title);';
-        $this->db->query($query_text);
-
-        echo $data['title'];
-        echo $data['location'];
+        echo $this->JSON_DATA;
     }
 }
