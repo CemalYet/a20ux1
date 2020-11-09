@@ -15,9 +15,12 @@ class Login extends Controller
     {
         $session = session();
         $model = new User_model();
+
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
+
         $data = $model->where('userName', $username)->first();
+
         if($data){
             $pass = $data['passHash'];
             $verify_pass = password_verify($password, $pass);
@@ -29,7 +32,7 @@ class Login extends Controller
                     'loggedIn'     => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/public/profile');
+                return redirect()->to('/public/feed.html');
             }
             else{
                 $session->setFlashdata('msg', 'Wrong Password');

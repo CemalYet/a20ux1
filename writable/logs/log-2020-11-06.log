@@ -1,45 +1,40 @@
-CRITICAL - 2020-11-06 05:20:42 --> syntax error, unexpected ';', expecting ',' or ')'
-#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\Users\\Julie\\...')
-#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
-#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
-#3 [internal function]: spl_autoload_call('App\\Controllers...')
-#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
-#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
-#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-11-06 05:21:54 --> syntax error, unexpected '{'
-#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\Users\\Julie\\...')
-#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
-#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
-#3 [internal function]: spl_autoload_call('App\\Controllers...')
-#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
-#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
-#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-11-06 05:22:46 --> There is no data to update.
-#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(834): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
-#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(79): CodeIgniter\Model->update(Array)
-#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->getUseLocation()
-#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
-#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#6 {main}
-CRITICAL - 2020-11-06 08:17:01 --> syntax error, unexpected ']'
-#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile('C:\\Users\\Julie\\...')
-#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Autoloader\Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
-#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
-#3 [internal function]: spl_autoload_call('App\\Controllers...')
-#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(869): class_exists('\\App\\Controller...', true)
-#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
-#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
-#8 {main}
-CRITICAL - 2020-11-06 08:38:36 --> Use of undefined constant someday - assumed 'someday' (this will throw an Error in a future version of PHP)
-#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Register.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\Users\\Julie\\...', 98, Array)
-#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Register->getDays()
-#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
-#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
-#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2020-11-06 05:17:08 --> Class 'Discovery_model' not found
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-11-06 05:21:13 --> Class 'Discovery_model' not found
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(890): App\Controllers\Home->__construct()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-11-06 05:46:54 --> Array to string conversion
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\lijne\\...', 18, Array)
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Feedcontroller->feed()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Feedcontroller))
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-11-06 05:54:52 --> Argument 2 passed to view() must be of the type array, string given, called in C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php on line 18
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php(18): view('feed.html', '[{"photoPath":"...')
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Feedcontroller->feed()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Feedcontroller))
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-11-06 08:18:53 --> Array to string conversion
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\Users\\lijne\\...', 28, Array)
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Feedcontroller->getDiscoveries()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Feedcontroller))
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-11-06 08:27:43 --> Argument 2 passed to view() must be of the type array, string given, called in C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php on line 23
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Feedcontroller.php(23): view('feed', '[{"photoPath":"...')
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Feedcontroller->feed()
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Feedcontroller))
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
