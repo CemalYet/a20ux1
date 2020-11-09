@@ -6,6 +6,10 @@ use CodeIgniter\Model;
 
 class Share_model extends Model
 {
+    protected $table = 'a20ux1.DiscoveryTable';
+    protected $primaryKey = 'discoveryId';
+    protected $allowedFields = ['title', 'date'];
+
     /**
      * EventModel constructor.
      */
