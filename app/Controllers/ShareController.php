@@ -12,6 +12,7 @@ use App\Models\Share_model;
 class ShareController extends BaseController
 {
     private $share_model;
+    private $JSON_DATA;
 
     public function __construct()
     {
@@ -39,12 +40,15 @@ class ShareController extends BaseController
             'location' => $this->JSON_DATA['my_location'],
             'description' => $this->JSON_DATA['my_description'],
             'leafId' => $this->JSON_DATA['my_leaf'],
-            'userIdFk' => "32",
+            'latitude' => $this->JSON_DATA['my_latitude'],
+            'longitude' => $this->JSON_DATA['my_longitude'],
+            'userIdFk' => "43",
         ];
         $data['takenDate'] = $data['date'] . ' ' . $data['hour'];
+        $data['GPSLocation'] = 'POINT (' . $data['latitude'] . ',' . $data['longitude'] . ')';
 
         $this->share_model->upload_data($data);
 
-        echo $this->JSON_DATA;
+        echo $data['GPSLocation'];
     }
 }
