@@ -32,6 +32,12 @@ class Discovery_model extends Model{
         return $query->getResult();
     }
 
+    public function get_user_discoveries($id) {
+        $query_text = 'SELECT a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title FROM a20ux1.DiscoveryTable WHERE a20ux1.DiscoveryTable.userIdFk = ?;';
+        $query = $this->db->query($query_text, $id);
+        return $query->getResult();
+    }
+
     public function get_user_info() {
         $session = \Config\Services::session();
         $session->get('ses_data');

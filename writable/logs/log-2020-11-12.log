@@ -1,0 +1,95 @@
+CRITICAL - 2020-11-12 06:03:26 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Discovery_model.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...', '11')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(24): App\Models\Discovery_model->get_user_discoveries('11')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getOwnDiscoveries()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-12 06:03:36 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(33): CodeIgniter\Model->find('11')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getUserData()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-12 06:03:49 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(33): CodeIgniter\Model->find('11')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getUserData()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-12 06:03:59 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Discovery_model.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...', '11')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(24): App\Models\Discovery_model->get_user_discoveries('11')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getOwnDiscoveries()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-12 06:04:43 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Discovery_model.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...', '11')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(24): App\Models\Discovery_model->get_user_discoveries('11')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getOwnDiscoveries()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-12 06:04:53 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(33): CodeIgniter\Model->find('11')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getUserData()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-12 06:05:03 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Discovery_model.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...', '11')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(24): App\Models\Discovery_model->get_user_discoveries('11')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getOwnDiscoveries()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-12 06:05:13 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(33): CodeIgniter\Model->find('11')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getUserData()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-11-12 06:05:51 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Discovery_model.php(37): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...', '11')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(24): App\Models\Discovery_model->get_user_discoveries('11')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getOwnDiscoveries()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-12 06:06:01 --> Unable to connect to the database.
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Profile.php(33): CodeIgniter\Model->find('11')
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Profile->getUserData()
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Profile))
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

@@ -1,0 +1,1 @@
+*{font-family:Lato,sans-serif}:root{--light-color:#39796b;--main-color:#004d40;--dark-color:#00251a}#Title{font-family:Merriweather,serif;font-size:35px;color:var(--dark-color)}body{background-color:#fff}#app{color:#2c3e50}#app,#video{text-align:center}#video{background-color:#000}#canvas{display:none}li{display:inline;padding:5px}
