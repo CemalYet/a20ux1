@@ -43,7 +43,7 @@ class Discovery_model extends Model{
     public function get_disco_info() {
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = 'SELECT title FROM a20ux1.DiscoveryTable WHERE discoveryId = 1';
+        $query_text = 'SELECT * FROM a20ux1.DiscoveryTable WHERE discoveryId = 1;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

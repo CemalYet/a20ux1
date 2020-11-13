@@ -1,0 +1,72 @@
+CRITICAL - 2020-11-13 04:22:06 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:26:05 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:32:38 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:32:45 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:33:07 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:33:18 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:47:35 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 04:47:49 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(23): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

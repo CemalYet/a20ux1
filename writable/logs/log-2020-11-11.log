@@ -1,0 +1,9 @@
+CRITICAL - 2020-11-11 09:55:48 --> Invalid file: discopost.php
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('discopost.php')
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('discopost', Array, true)
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(19): view('discopost')
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->discopost()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
