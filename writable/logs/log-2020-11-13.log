@@ -70,3 +70,34 @@ CRITICAL - 2020-11-13 04:47:49 --> Unable to connect to the database.
 #5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #7 {main}
+CRITICAL - 2020-11-13 08:01:42 --> Unable to connect to the database.
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Models\Discovery_model.php(47): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(31): App\Models\Discovery_model->get_disco_info()
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-13 08:12:14 --> Call to a member function get_disco_info() on null
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-11-13 08:14:40 --> Call to a member function get_disco_info() on null
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-11-13 09:43:08 --> Failed to parse json string, error: "Malformed UTF-8 characters, possibly incorrectly encoded".
+#0 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\Format\JSONFormatter.php(71): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Malformed UTF-8...')
+#1 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\HTTP\Response.php(551): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\HTTP\Response.php(450): CodeIgniter\HTTP\Response->formatBody(Array, 'json')
+#3 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\app\Controllers\Discovery.php(32): CodeIgniter\HTTP\Response->setJSON(Array)
+#4 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(918): App\Controllers\Discovery->getDiscoInfo()
+#5 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Discovery))
+#6 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\Gebruiker\Desktop\SCHOOL\Master\RenD\Code\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

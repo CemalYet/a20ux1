@@ -13,6 +13,7 @@ class Discovery extends BaseController
     public function __construct()
     {
         $this->discovery_model = new Discovery_model();
+        $this->JSON_DATA = (array)json_decode(file_get_contents("php://input"));
     }
 
     public function discopost(){
@@ -29,6 +30,43 @@ class Discovery extends BaseController
 
     public function getDiscoInfo(){
         $data = $this->discovery_model->get_disco_info();
-        echo json_encode($data);
+        return $this->response->setJSON($data);
+    }
+
+    public function getUserInfo(){
+        $data = $this->discovery_model->get_user_info();
+        return $this->response->setJSON($data);
+    }
+
+    public function getComments(){
+        $data = $this->discovery_model->get_comments();
+        return $this->response->setJSON($data);
+    }
+
+    public function getTags() {
+        $data = $this->discovery_model->get_tags();
+        return $this->response->setJSON($data);
+    }
+
+    public function savecomment(){
+        $data = ['newComment' => $this->JSON_DATA['my_comment']];
+        $this->discovery_model->upload_data($data);
+        echo $data['newComment'];
+    }
+
+    public function savelike() {
+        $data = [
+            'likedByUserIdFk' => $this->JSON_DATA['userId'],
+            'discoveryIdFk' => $this->JSON_DATA['discoId']
+        ];
+        $this->discovery_model->send_like($data);
+    }
+
+    public function deletelike() {
+        $data = [
+            'likedByUserIdFk' => $this->JSON_DATA['userId'],
+            'discoveryIdFk' => $this->JSON_DATA['discoId']
+        ];
+        $this->discovery_model->remove_like($data);
     }
 }
