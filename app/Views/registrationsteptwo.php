@@ -12,13 +12,13 @@
     <h1 class="registrationtitle"> Geo Tagging </h1>
 
     <div class="paragraphbox">
-        <p class="text1"> In order to put your pictures on our Discovery map, we would need to use your location. </p>
+        <p class="text1" style="font-size: 16px !important;"> In order to put your pictures on our Discovery map, we would need to use your location. </p>
 
-        <p class="text2"> Don't worry, we won't sell your location like those other nasty social media platforms ;) </p>
+        <p class="text2" style="font-size: 16px !important;"> Don't worry, we won't sell your location like those other nasty social media platforms ;) </p>
     </div>
     <label class="container">
         <form action="/public/register/getUseLocation" method="post">
-            <label class="locationCheck" for="locationCheckbox">
+            <label class="locationCheck" style="font-size: 16px !important;" for="locationCheckbox">
                 I agree to let this app use my location
                 <input type="checkbox" name="locationCheckbox" id="locationCheckbox"/>
             </label>
@@ -26,7 +26,7 @@
             <br>
 
             <div class="buttons">
-                <button type="submit" class="button"><strong>NEXT</strong></button>
+                <button type="submit" style="font-size: 20px !important;" class="button"><strong>NEXT</strong></button>
             </div>
 
         </form>

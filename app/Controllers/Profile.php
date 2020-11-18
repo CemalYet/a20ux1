@@ -10,7 +10,7 @@ class Profile extends Controller
 {
     public function index()
     {
-        $session = session();
+        // $session = session();
         // echo "Welcome back, ".$session->get('userName');
         return view('profile');
         //$this->getOwnDiscoveries();
@@ -32,6 +32,61 @@ class Profile extends Controller
         $id = $session->get('userId');
         $data = $model->find($id);
         echo json_encode($data);
+    }
+
+    public function settings()
+    {
+        // $session = session();
+        // echo "Welcome back, ".$session->get('userName');
+        return view('settings');
+        //$this->getOwnDiscoveries();
+    }
+
+    public function updateProfile()
+    {
+        $session = session();
+        $model = new User_model();
+
+        $_POST = json_decode($_POST['data'],true);
+        $userId = $session->get('userId');
+
+        $newData = [
+            'userId'        => $userId,
+            'userName'      => $_POST['userName'],
+            'emailAddress'  => $_POST['emailAddress'],
+            'avatar'        => $_POST['avatar'],
+        ];
+        $model->save($newData);
+
+        return "Profile successfully updated";
+    }
+
+    public function updatePassword()
+    {
+        $session = session();
+        $model = new User_model();
+
+        $_POST = json_decode($_POST['data'],true);
+        $userId = $session->get('userId');
+        $password = $_POST['password'];
+
+        $data = $model->where('userId', $userId)->first();
+
+        $pass = $data['passHash'];
+        $verify_pass = password_verify($password, $pass);
+
+        if($verify_pass) {
+            $newData = [
+                'userId' => $userId,
+                'passHash' => $_POST['newPassword'],
+            ];
+            $model->save($newData);
+
+            return "Password successfully updated";
+        }
+        else{
+            return "Wrong password";
+        }
     }
 
 /*    public function getTags(){

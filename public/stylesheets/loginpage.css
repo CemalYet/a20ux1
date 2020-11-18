@@ -31,7 +31,7 @@ body {
     margin-right: auto;
     padding: 20px 50px 10px 10px;
     border-bottom: 3px solid white;
-    width: 150px;
+    /*width: 150px;*/
 }
 
 input {
@@ -45,7 +45,8 @@ input {
 }
 
 .buttons {
-    width: 260px;
+    /*width: 260px;*/
+    font-size: 20px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
@@ -61,7 +62,7 @@ input {
     borderradius: 15px;
     color: #39796B;
     box-shadow: 5px 5px 10px #1b1b1b;
-
+    font-size: 20px;
 }
 
 .registrationtitle {
@@ -69,25 +70,28 @@ input {
     justify-content: center;
     font-family: Merriweather;
     text-decoration: underline;
+    text-align: center;
     font-size: 50px;
     padding-top: 20px;
 }
 
 .inputsregistration {
     padding: 10px 50px 10px 10px;
+    font-size: 20px;
 }
 
 .text1 {
     font-family: Lato;
     text-align: center;
-    padding: 30px 30px 10px 30px;
+    font-size: 20px !important;
+    /*padding: 30px 30px 10px 30px;*/
 }
 
 .text2 {
     font-family: Lato;
     text-align: center;
-    padding: 0px 30px 80px 30px;
-    font-size: 12px;
+    /*padding: 0px 30px 80px 30px;*/
+    font-size: 20px !important;
 }
 
 .paragraphbox {
@@ -96,6 +100,7 @@ input {
     justify-content: center;
     flex-direction: column;
     margin: auto;
+    font-size: 20px !important;
 }
 
 .container {
@@ -106,9 +111,9 @@ input {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-size: 12px;
+    font-size: 24px !important;
     font-family: Lato;
-    padding: 50px 0px 20px 0px;
+    /*padding: 50px 0px 20px 0px;*/
     text-align: center;
 }
 
@@ -128,7 +133,7 @@ input {
 li{
     list-style-type: none;
     list-style-position: outside;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 .daybutton:not(:checked),
@@ -162,7 +167,7 @@ li{
 
 .alldone {
     font-family: Lato;
-    font-size: 28px;
+    font-size: 38px;
     display: flex;
     justify-content: center;
     padding-top: 70px;
@@ -175,7 +180,7 @@ li{
     border-radius: 50%;
     border: 2px solid white;
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     font-family: Lato;
 }
 

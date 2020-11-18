@@ -10,13 +10,13 @@
 
 <body>
 
-    <h1 class="registrationtitle"> Daily reminder </h1>
+    <h1 class="registrationtitle" style="text-align: center !important;"> Daily Reminder </h1>
 
     <div class="paragraphbox">
-        <p class="text1"> Would you like us to remind you to go on walks on certain days? </p>
-        <div class="container">
+        <p class="text1" > Would you like us to remind you to go on walks on certain days? </p>
+        <div class="container" style="padding: 0px !important;">
             <form action="/public/register/getDays" method="post">
-                <ul class="daybuttons">
+                <ul class="daybuttons" >
                     <li >
                         <input class="daybutton" type="checkbox" id="monday" name="days[]" value="monday">
                         <label for="monday">Mo</label>
@@ -47,10 +47,10 @@
                     </li>
                 </ul>
 
-                <p class="text2"> You can always change this again later, no pressure ;) </p>
+                <p class="text2" style="padding: 10px 0 10px 0 !important; font-size: 14px !important;"> You can always change this again later, no pressure ;) </p>
 
                 <div class="buttons">
-                    <button type="submit" class="button"><strong>NEXT</strong></button>
+                    <button type="submit" style="font-size: 20px !important;" class="button"><strong>NEXT</strong></button>
                 </div>
             </form>
         </div>

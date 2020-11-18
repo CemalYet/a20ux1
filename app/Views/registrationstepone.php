@@ -12,7 +12,7 @@
     <h1 class="registrationtitle"> Registration </h1>
 
     <form class="" action="/public/register/save" method="post">
-        <div class="inputs">
+        <div class="inputs" style="font-size: 20px !important;">
             <div class="text-box">
                 <input class="inputsregistration" type="text" placeholder="Username" name="username" value="<?= set_value('username') ?>">
             </div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="buttons">
-            <button type="submit" class="button"><strong>NEXT</strong></button>
+            <button type="submit" style="font-size: 22px !important;" class="button"><strong>NEXT</strong></button>
         </div>
     </form>
 
