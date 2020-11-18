@@ -1,0 +1,27 @@
+CRITICAL - 2020-11-18 06:33:15 --> Invalid file: index.php
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\ShareController.php(25): view('index')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\ShareController->share()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShareController))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-18 06:33:49 --> Invalid file: index.php
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\ShareController.php(25): view('index')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\ShareController->share()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShareController))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-18 06:34:32 --> Invalid file: index.php
+#0 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\Common.php(1119): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\ShareController.php(25): view('index')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\ShareController->share()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ShareController))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

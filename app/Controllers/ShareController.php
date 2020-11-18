@@ -22,7 +22,7 @@ class ShareController extends BaseController
 
     public function share()
     {
-        return view('share');
+        return view('index');
     }
 
     public function getFriends()
