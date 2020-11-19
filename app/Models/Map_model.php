@@ -12,19 +12,21 @@ class Map_model extends Model
     }
 
     public function get_my_discoveries() {
-        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.GPSLocation, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.UserTable.userId=11;';
+        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.UserTable.userId=17 AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function get_friend_discoveries() {
-        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.GPSLocation, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.DiscoveryTable.userIdFk IN (SELECT DISTINCT userId_1 FROM a20ux1.FriendsTable WHERE userId_2=11 UNION SELECT DISTINCT userId_2 FROM a20ux1.FriendsTable WHERE userId_1=11);';
+        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.DiscoveryTable.userIdFk IN (SELECT DISTINCT sender FROM a20ux1.FriendsTable WHERE receiver=17 AND state=1 UNION SELECT DISTINCT receiver FROM a20ux1.FriendsTable WHERE sender=17 AND state=1) AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function get_popular_discoveries() {
-        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.GPSLocation, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable WHERE a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId;';
+        $session = \Config\Services::session();
+        $session->get('ses_data');
+        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable WHERE a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
