@@ -40,21 +40,20 @@ class Friends_model extends Model
     public function search($userId, $search_string) {
         // first displays user's friends whose names match the search string
         // then displays other (unfriended) users whose name match the search string
-        $query_text = "SELECT friends.userName, friends.userId, friends.avatar 
+        $query_text = "SELECT userName, userId, avatar 
                         FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
-                        WHERE a20ux1.FriendsTable.sender = %s 
+                        WHERE a20ux1.FriendsTable.sender = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
                         UNION 
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
-                        WHERE a20ux1.FriendsTable.receiver = %s) AS friends
-                        WHERE (lower(friends.userName) LIKE '%s%%')
+                        WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%' 
                         UNION
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%';";
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%') AS search;";
         $sql = sprintf($query_text, $userId, $userId, $search_string, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
