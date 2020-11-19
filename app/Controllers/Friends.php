@@ -8,6 +8,33 @@ use App\Models\Friends_model;
 
 class Friends extends BaseController
 {
+    public function getFriends()
+    {
+        $session = session();
+        $model = new Friends_model();
+
+        $userId = $session->get('userId');
+        $data = $model->get_friends($userId);
+
+        echo json_encode($data);
+    }
+
+    public function search()
+    {
+        $session = session();
+
+        $userId = $session->get('userId');
+
+        // gets the search string from frontend
+        $_POST = json_decode($_POST['data'], true);
+        $search_string = $_POST['search_string'];
+
+        $model = new Friends_model();
+        $data = $model->search($userId, $search_string);
+
+        echo json_encode($data);
+    }
+
     public function addFriend()
     {
         $session = session();
@@ -48,7 +75,7 @@ class Friends extends BaseController
         $model = new Friends_model();
         $model->accept_friend_request($userId_1, $userId_2, $state);
 
-        return "Friend request accepted";
+        return "Friend request accepted.";
     }
 
     public function unfriend()
@@ -60,11 +87,11 @@ class Friends extends BaseController
 
         // gets the userId of the person to be unfriended
         $_POST = json_decode($_POST['data'], true);
-        $userB = $_POST['userB'];
+        $userB = $_POST['userId'];
 
         $model = new Friends_model();
         $model->unfriend($userA, $userB);
 
-        return "Unfriending was successful";
+        return "Unfriending was successful.";
     }
 }
