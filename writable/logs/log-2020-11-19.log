@@ -60,3 +60,219 @@ CRITICAL - 2020-11-19 08:37:04 --> syntax error, unexpected '$this' (T_VARIABLE)
 #6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2020-11-19 14:32:15 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'te', 'te')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'te')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:32:29 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:34:42 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 's', 's')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 's')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:34:58 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:35:24 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'f', 'f')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'f')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:35:33 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:39:10 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'se', 'se')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:39:14 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:41:47 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'se', 'se')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:41:52 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:42:37 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:42:40 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'se', 'se')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:50:42 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'a', 'a')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'a')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:50:47 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', NULL, NULL)
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:54:21 --> sprintf(): Too few arguments
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'sprintf(): Too ...', 'C:\\Users\\Julie\\...', 57, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(57): sprintf('SELECT userName...', '11', '11', 'se', 'se')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:59:26 --> preg_match(): Empty regular expression
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): E...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match('', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 14:59:30 --> preg_match(): Empty regular expression
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): E...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match('', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:01:38 --> preg_match_all(): Unknown modifier 'b'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:01:44 --> preg_match_all(): Unknown modifier 'b'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:02:05 --> preg_match_all(): Unknown modifier 'c'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:02:10 --> preg_match_all(): Unknown modifier 'c'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:02:14 --> preg_match_all(): Unknown modifier 'c'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:02:52 --> preg_match_all(): Unknown modifier ']'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', 'se')
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-19 15:02:55 --> preg_match_all(): Unknown modifier ']'
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match_all(...', 'C:\\Users\\Julie\\...', 65, Array)
+#1 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Models\Friends_model.php(65): preg_match_all('%[-+]?(?:[ 0]|[...', '')
+#2 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\app\Controllers\Friends.php(33): App\Models\Friends_model->search('11', NULL)
+#3 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->search()
+#4 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\Julie\Documents\WebDev\RD\Project Rep\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

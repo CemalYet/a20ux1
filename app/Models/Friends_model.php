@@ -45,16 +45,16 @@ class Friends_model extends Model
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.sender = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
-                        UNION 
+                        UNION ALL
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%' 
-                        UNION
+                        UNION 
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%') AS search;";
-        $sql = sprintf($query_text, $userId, $userId, $search_string, $search_string);
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%') AS result;";
+        $sql = sprintf($query_text, $userId, $search_string, $userId, $search_string, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
     }
