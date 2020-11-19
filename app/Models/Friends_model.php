@@ -50,19 +50,20 @@ class Friends_model extends Model
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.receiver = %s) AS friends
-                        WHERE (lower(friends.userName) LIKE '%s%')
+                        WHERE (lower(friends.userName) LIKE '%s%%')
                         UNION
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%';";
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%';";
         $sql = sprintf($query_text, $userId, $userId, $search_string, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
     }
 
-    public function add_friend($userId_1, $userId_2, $state) {
-        $query_text = "INSERT INTO `a20ux1`.`FriendsTable` (`sender`, `receiver`, 'state') VALUES (? , ?, ?);";
-        $this->db->query($query_text, $userId_1, $userId_2, $state);
+    public function add_friend($userId_1, $userId_2) {
+        $query_text = "INSERT INTO `a20ux1`.`FriendsTable` (`sender`, `receiver`, `state`) VALUES (%s, %s, b'0');";
+        $sql = sprintf($query_text, $userId_1, $userId_2);
+        $this->db->query($sql);
     }
 
     public function get_friend_request($userId_2) {

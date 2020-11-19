@@ -45,13 +45,8 @@ class Friends extends BaseController
         $_POST = json_decode($_POST['data'], true);
         $userId_2 = $_POST['userId_2'];
 
-        $state = 0;
-        // Possible states are:
-        // pending: awaiting userId_2's' confirmation (this function is always triggered by userId_1)
-        // friends: mutual friendship between both users
-
         $model = new Friends_model();
-        $model->add_friend($userId_1, $userId_2, $state);
+        $model->add_friend($userId_1, $userId_2);
 
         return "Friend request sent.";
     }
