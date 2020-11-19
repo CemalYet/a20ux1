@@ -17,7 +17,17 @@ class Friends_model extends Model
     }
 
     public function get_friends($id) {
-        $query_text = "SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable ON a20ux1.FriendsTable.userId_2 = a20ux1.UserTable.userId WHERE a20ux1.FriendsTable.userId_1 = %s UNION SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable ON a20ux1.FriendsTable.userId_1 = a20ux1.UserTable.userId WHERE a20ux1.FriendsTable.userId_2 = %s;";
+        $query_text = "SELECT friends.userName, friends.userId, friends.avatar 
+                        FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+                        FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
+                        ON a20ux1.FriendsTable.userId_2 = a20ux1.UserTable.userId 
+                        WHERE a20ux1.FriendsTable.userId_1 = %s AND a20ux1.FriendsTable.state = 'friends' 
+                        UNION 
+                        SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+                        FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
+                        ON a20ux1.FriendsTable.userId_1 = a20ux1.UserTable.userId 
+                        WHERE a20ux1.FriendsTable.userId_2 = %s AND a20ux1.FriendsTable.state = 'friends' ) 
+                        AS friends;";
         $sql = sprintf($query_text, $id, $id);
         $query = $this->db->query($sql);
         return $query->getResult();
@@ -26,7 +36,7 @@ class Friends_model extends Model
     public function search($userId, $search_string) {
         // first displays user's friends whose names match the search string
         // then displays other (unfriended) users whose name match the search string
-        $query_text = "SELECT userName, userId, avatar 
+        $query_text = "SELECT friends.userName, friends.userId, friends.avatar 
                         FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.userId_2 = a20ux1.UserTable.userId 
@@ -40,24 +50,24 @@ class Friends_model extends Model
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.UserTable 
                         WHERE lower(a20ux1.UserTable.userName) LIKE '%s%';";
-        $sql = sprintf($query_text, $userId, $userId, $search_string);
+        $sql = sprintf($query_text, $userId, $userId, $search_string, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
     }
 
-    public function add_friend($uerId_1, $userId_2, $state) {
+    public function add_friend($userId_1, $userId_2, $state) {
         $query_text = "INSERT INTO `a20ux1`.`FriendsTable` (`userId_1`, `userId_2`, 'state') VALUES (? , ?, ?);";
         $this->db->query($query_text, $userId_1, $userId_2, $state);
     }
 
-    public function get_friend_request($userId_2, $state) {
+    public function get_friend_request($userId_2) {
         // first displays user's friends whose names match the search string
         // then displays other (unfriended) users whose name match the search string
         $query_text = "SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.userId_1 = a20ux1.UserTable.userId 
-                        WHERE a20ux1.FriendsTable.userId_2 = %s AND a20ux1.FriendsTable.state = %s;";
-        $sql = sprintf($query_text, $userId_2, $state);
+                        WHERE a20ux1.FriendsTable.userId_2 = %s AND a20ux1.FriendsTable.state = 'pending';";
+        $sql = sprintf($query_text, $userId_2);
         $query = $this->db->query($sql);
         return $query->getResult();
     }
