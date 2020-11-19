@@ -39,8 +39,7 @@ class Friends_model extends Model
                         UNION
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%'
-                        ;";
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%';";
         $sql = sprintf($query_text, $userId, $userId, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
@@ -49,6 +48,18 @@ class Friends_model extends Model
     public function add_friend($uerId_1, $userId_2, $state) {
         $query_text = "INSERT INTO `a20ux1`.`FriendsTable` (`userId_1`, `userId_2`, 'state') VALUES (? , ?, ?);";
         $this->db->query($query_text, $userId_1, $userId_2, $state);
+    }
+
+    public function get_friend_request($userId_2, $state) {
+        // first displays user's friends whose names match the search string
+        // then displays other (unfriended) users whose name match the search string
+        $query_text = "SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+                        FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
+                        ON a20ux1.FriendsTable.userId_1 = a20ux1.UserTable.userId 
+                        WHERE a20ux1.FriendsTable.userId_2 = %s AND a20ux1.FriendsTable.state = %s;";
+        $sql = sprintf($query_text, $userId_2, $state);
+        $query = $this->db->query($sql);
+        return $query->getResult();
     }
 
     public function accept_friend_request($userId_1, $userId_2, $state) {

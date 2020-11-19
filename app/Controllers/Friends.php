@@ -56,6 +56,24 @@ class Friends extends BaseController
         return "Friend request sent.";
     }
 
+    public function getFriendRequest()
+    {
+        $session = session();
+
+        // userId who received the friend request (userId_2)
+        $userId_2 = $session->get('userId');
+
+        $state = 'pending';
+        // Possible states are:
+        // pending: awaiting userId_2's' confirmation (this function is always triggered by userId_1)
+        // friends: mutual friendship between both users
+
+        $model = new Friends_model();
+        $data = $model->get_friend_request($userId_2, $state);
+
+        echo json_encode($data);
+    }
+
     public function acceptFriendRequest()
     {
         $session = session();
