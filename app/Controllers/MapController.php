@@ -20,17 +20,17 @@ class MapController extends BaseController
 
     public function getMyDiscoveries(){
         $data = $this->map_model->get_my_discoveries();
-        echo '<pre>'; print_r($data); echo '</pre>';
+        return $this->response->setJSON($data);
     }
 
     public function getFriendDiscoveries(){
         $data = $this->map_model->get_friend_discoveries();
-        echo '<pre>'; print_r($data); echo '</pre>';
+        return $this->response->setJSON($data);
     }
 
     public function getPopularDiscoveries(){
         $data = $this->map_model->get_popular_discoveries();
-        echo '<pre>'; print_r($data); echo '</pre>';
+        return $this->response->setJSON($data);
     }
 
     public function searching(){
