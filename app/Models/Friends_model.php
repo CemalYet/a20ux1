@@ -53,7 +53,7 @@ class Friends_model extends Model
                         UNION DISTINCT
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, null AS state 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%' AND a20ux1.UserTable.userName NOT IN friends) AS result;";
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%' AND a20ux1.UserTable.userName NOT IN friends.userName) AS result;";
         $sql = sprintf($query_text, $userId, $search_string, $userId, $search_string, $search_string);
         $query = $this->db->query($sql);
         return $query->getResult();
