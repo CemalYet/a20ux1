@@ -32,4 +32,11 @@ class MapController extends BaseController
         $data = $this->map_model->get_popular_discoveries();
         echo '<pre>'; print_r($data); echo '</pre>';
     }
+
+    public function searching(){
+        $req = $this->request->getVar('data');
+        $data = $this->map_model->search($req);
+        return $this->response->setJSON($data);
+    }
+
 }

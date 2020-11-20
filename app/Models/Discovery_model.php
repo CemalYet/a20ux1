@@ -39,5 +39,6 @@ class Discovery_model extends Model{
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
+    
 
 }
