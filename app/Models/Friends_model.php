@@ -40,18 +40,18 @@ class Friends_model extends Model
     public function search($userId, $search_string) {
         // first displays user's friends whose names match the search string
         // then displays other (unfriended) users whose name match the search string
-        $query_text = "SELECT userName, userId, avatar 
-                        FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+        $query_text = "SELECT userName, userId, avatar, state 
+                        FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.sender = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
                         UNION ALL
-                        SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+                        SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%' 
                         UNION 
-                        SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar 
+                        SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, null AS state 
                         FROM a20ux1.UserTable 
                         WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%') AS result;";
         $sql = sprintf($query_text, $userId, $search_string, $userId, $search_string, $search_string);
