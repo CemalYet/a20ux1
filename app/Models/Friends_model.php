@@ -45,12 +45,12 @@ class Friends_model extends Model
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.sender = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
-                        UNION ALL
+                        UNION DISTINCT
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%' 
-                        UNION 
+                        UNION DISTINCT
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, null AS state 
                         FROM a20ux1.UserTable 
                         WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%') AS result;";
