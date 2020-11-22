@@ -41,7 +41,7 @@ class Friends_model extends Model
         // first displays user's friends whose names match the search string
         // then displays other (unfriended) users whose name match the search string
         $query_text = "SELECT userName, userId, avatar, state 
-                        FROM ((SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
+                        FROM (SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
                         WHERE a20ux1.FriendsTable.sender = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
@@ -49,12 +49,22 @@ class Friends_model extends Model
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, a20ux1.FriendsTable.state  
                         FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
                         ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
-                        WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%') AS friends 
+                        WHERE a20ux1.FriendsTable.receiver = %s AND lower(a20ux1.UserTable.userName) LIKE '%s%%'
                         UNION DISTINCT
                         SELECT a20ux1.UserTable.userName, a20ux1.UserTable.userId, a20ux1.UserTable.avatar, null AS state 
                         FROM a20ux1.UserTable 
-                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%' AND a20ux1.UserTable.userName NOT IN friends.userName) AS result;";
-        $sql = sprintf($query_text, $userId, $search_string, $userId, $search_string, $search_string);
+                        WHERE lower(a20ux1.UserTable.userName) LIKE '%s%%' AND a20ux1.UserTable.userId NOT IN (SELECT userId FROM 
+                        (SELECT a20ux1.UserTable.userId
+	                    FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
+	                    ON a20ux1.FriendsTable.receiver = a20ux1.UserTable.userId 
+	                    WHERE a20ux1.FriendsTable.sender = %s 
+	                    UNION DISTINCT
+	                    SELECT a20ux1.UserTable.userId
+	                    FROM a20ux1.FriendsTable INNER JOIN a20ux1.UserTable 
+	                    ON a20ux1.FriendsTable.sender = a20ux1.UserTable.userId 
+	                    WHERE a20ux1.FriendsTable.receiver = %s) as t)
+	                    ) AS result ;";
+        $sql = sprintf($query_text, $userId, $search_string, $userId, $search_string, $search_string, $userId, $userId);
         $query = $this->db->query($sql);
         return $query->getResult();
     }
