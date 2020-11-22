@@ -26,9 +26,7 @@ class Map_model extends Model
     }
 
     public function get_popular_discoveries() {
-        $session = \Config\Services::session();
-        $session->get('ses_data');
-        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable WHERE a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;';
+        $query_text = 'SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.photoPath2, a20ux1.DiscoveryTable.photoPath3, a20ux1.DiscoveryTable.photoPath4, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE discoveryId IN (SELECT discoveryIdFk FROM a20ux1.LikedTable GROUP BY discoveryIdFk HAVING count(*)>1) AND DATE_ADD(takenDate, INTERVAL 30 DAY) >= current_timestamp() AND a20ux1.UserTable.useLocation=1 AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;';
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
