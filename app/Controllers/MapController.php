@@ -33,6 +33,12 @@ class MapController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function getDiscoveryPhotos(){
+        $discoId = $this->request->getVar('data');
+        $data = $this->map_model->get_discovery_photos($discoId);
+        return $this->response->setJSON($data);
+    }
+
     public function searching(){
         $req = $this->request->getVar('data');
         $data = $this->map_model->search($req);
