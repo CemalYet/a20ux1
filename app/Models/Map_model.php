@@ -40,7 +40,7 @@ class Map_model extends Model
     public function search($req) {
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "SELECT a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.UserTable.userName, a20ux1.DiscoveryPhotosTable.PhotoPath FROM a20ux1.DiscoveryTable, a20ux1.UserTable, a20ux1.DiscoveryPhotosTable WHERE a20ux1.DiscoveryPhotosTable.PhotoOrder=1 AND a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND (instr(a20ux1.DiscoveryTable.takenDate, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.title, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.description, '{$req}') > 0 OR instr(a20ux1.UserTable.userName, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.location, '{$req}') > 0);";
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.UserTable.userName, a20ux1.DiscoveryTable.location, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryPhotosTable.PhotoPath FROM a20ux1.DiscoveryTable, a20ux1.UserTable, a20ux1.DiscoveryPhotosTable WHERE a20ux1.DiscoveryPhotosTable.PhotoOrder=1 AND a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND (instr(a20ux1.DiscoveryTable.takenDate, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.title, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.description, '{$req}') > 0 OR instr(a20ux1.UserTable.userName, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.location, '{$req}') > 0);";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
