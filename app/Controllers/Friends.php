@@ -64,6 +64,16 @@ class Friends extends BaseController
         echo json_encode($data);
     }
 
+    public function getFriendRequestNotifications(){
+        $session = session();
+        $userId = $session->get('userId');
+
+        $model = new Friends_model();
+        $data = $model->getFriendRequestNotifications($userId);
+
+        echo json_encode($data);
+    }
+
     public function acceptFriendRequest()
     {
         $session = session();

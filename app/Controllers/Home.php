@@ -21,7 +21,7 @@ class Home extends \CodeIgniter\Controller
 
     public function home() {
         $this->data['menu_items'] = $this->menu_model->get_menuitems('Home');
-        return view('main', $this->data);
+        return view('index');
     }
 
     public function about() {

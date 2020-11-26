@@ -100,4 +100,9 @@ class Friends_model extends Model
         return $query->getResult();
     }
 
+    public function getFriendRequestNotifications($userId){
+        $query = $this->db->query("CALL getAmountOfFriendRequests({$userId});");
+        return $query->getResult();
+    }
+
 }
