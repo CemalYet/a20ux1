@@ -22,13 +22,7 @@ class ShareController extends BaseController
 
     public function share()
     {
-        return view('share');
-    }
-
-    public function getFriends()
-    {
-        $friends = $this->share_model->get_friends();
-        echo json_encode($friends);
+        return view('index');
     }
 
     public function save()
