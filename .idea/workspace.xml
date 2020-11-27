@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab514b21-c6fb-4017-bed6-442a44f7100a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/TestController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Menu_model.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/about.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/feed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/list.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/loginpage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/main.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/registrationdone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/registrationstepone.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/registrationstepthree.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/registrationsteptwo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/reglog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Views/welcome_message.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.0b29a90b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.1bdf7c24.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.3859566e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.5e41ee23.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.60e9606f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.6f538041.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.70995006.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.7bb165fc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.83cfbfc9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.8e7fe81c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.910c00e7.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.a62ff74b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.b921896e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.c7bed7e1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.d469c377.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.eaeb558a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.ec7ea6c6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/chunk-vendors.30941758.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/chunk-vendors.5358dd85.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/chunk-vendors.77ad5494.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/feed.21bbb1ee.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/feed.e403487d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/reglog.d0b755cc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/Binr.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/ash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/chestnut.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/forester.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/tanzania.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/whiteTree.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.08fdf24d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.08fdf24d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.0cc93b8e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.0cc93b8e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.1eae3dec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.1eae3dec.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.319b0b07.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.319b0b07.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.4a4f824b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.4a4f824b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.50055b24.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.50055b24.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.613a7a64.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.613a7a64.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.62885895.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.62885895.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.69485f64.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.69485f64.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.7800ca98.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.7800ca98.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.8d77912a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.8d77912a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.a1905943.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.a1905943.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.b2d46d97.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.b2d46d97.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.be78bfcd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.be78bfcd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d2bce28e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d2bce28e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d371ee08.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d371ee08.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d3e216fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.d3e216fd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.51827840.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.51827840.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.7650ee6c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.7650ee6c.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.8bcd1053.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.8bcd1053.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.93effc7e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.93effc7e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.972fd58f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.972fd58f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.03db90aa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.03db90aa.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.0fe87b7e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.0fe87b7e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.4a9d1d46.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.4a9d1d46.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.5e6bc785.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.5e6bc785.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.6a541d56.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.6a541d56.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.957388f3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.957388f3.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.b49db349.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.b49db349.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.bda0cfe6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.bda0cfe6.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.beb37c2f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.beb37c2f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.cd1000f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.cd1000f7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.ea3f8d16.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.ea3f8d16.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.fb6f413e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/feed.fb6f413e.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.44ad1697.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.44ad1697.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.6f3e441d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.6f3e441d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/reglog.4b400581.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/reglog.4b400581.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/reglog.54b1f67b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/reglog.54b1f67b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/back.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/loginpage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/navbar.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../intelliJ projects/a20ux1" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab514b21-c6fb-4017-bed6-442a44f7100a" name="Default Changelist" comment="" />
+      <created>1606484349310</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606484349310</updated>
+      <workItem from="1606484350341" duration="2555000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#Deployment" timestamp="1606487339362">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1606487339362" />
+    <state x="536" y="165" key="#SSH_Configurations" timestamp="1606486894447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="536" y="165" key="#SSH_Configurations/0.0.1920.1040@0.0.1920.1040" timestamp="1606486894447" />
+    <state x="1138" y="191" width="366" height="588" key="ftp.server.browser" timestamp="1606487331866">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1138" y="191" width="366" height="588" key="ftp.server.browser/0.0.1920.1040@0.0.1920.1040" timestamp="1606487331866" />
+  </component>
+</project>
