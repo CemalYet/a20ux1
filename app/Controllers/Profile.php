@@ -28,9 +28,25 @@ class Profile extends Controller
 
     public function getUserData(){
         $model = new User_model();
+
+        $_POST = json_decode($_POST['data'], true);
+        $userId = $_POST['userId'];
+
+        // get user's data from database
+        $data = $model->find($userId);
+
+        echo json_encode($data);
+    }
+
+    public function getCurrentUserData(){
+        $model = new User_model();
+
         $session = session();
-        $id = $session->get('userId');
-        $data = $model->find($id);
+        $userId = $session->get('userId');
+
+        // get user's data from database
+        $data = $model->find($userId);
+
         echo json_encode($data);
     }
 
