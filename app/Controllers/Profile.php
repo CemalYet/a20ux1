@@ -26,7 +26,7 @@ class Profile extends Controller
         echo json_encode($data);
     }
 
-    public function getUserData(){
+    public function getFetchedUserData(){
         $model = new User_model();
 
         $_POST = json_decode($_POST['data'], true);
@@ -45,7 +45,8 @@ class Profile extends Controller
         $userId = $session->get('userId');
 
         // get user's data from database
-        $data = $model->find($userId);
+        // $data = $model->find($userId);
+        $data = $model->getCurrentData($userId);
 
         echo json_encode($data);
     }
