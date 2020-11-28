@@ -6,6 +6,7 @@ use App\Models\Reminder_model;
 
 class Register extends \CodeIgniter\Controller
 {
+    private $user_model;
     private $JSON_DATA;
 
     public function __construct()

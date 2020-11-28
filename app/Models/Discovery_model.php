@@ -32,10 +32,8 @@ class Discovery_model extends Model{
         return $query->getResult();
     }
 
-    public function get_user_info() {
-        $session = \Config\Services::session();
-        $session->get('ses_data');
-        $query_text = 'SELECT userName, emailAddress, avatar FROM a20ux1.UserTable WHERE userId = 16;';
+    public function get_user_info($emailAddress) {
+        $query_text = "SELECT userName, avatar, userId, emailAddress FROM a20ux1.UserTable WHERE emailAddress = '{$emailAddress}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

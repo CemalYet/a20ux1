@@ -33,7 +33,6 @@ class User_model extends Model{
         return $data;
     }
     
-    
 
     public function check_email($data){
         $session = \Config\Services::session();
