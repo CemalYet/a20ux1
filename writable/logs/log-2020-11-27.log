@@ -1,0 +1,162 @@
+CRITICAL - 2020-11-27 08:11:33 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(104): CodeIgniter\Database\BaseConnection->query('CALL getAmountO...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(72): App\Models\Friends_model->getFriendRequestNotifications(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriendRequestNotifications()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:37 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(21): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(22): App\Models\Map_model->get_my_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getMyDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:42 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(27): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(27): App\Models\Map_model->get_friend_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getFriendDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:43 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(33): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(32): App\Models\Map_model->get_popular_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getPopularDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:43 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(27): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(27): App\Models\Map_model->get_friend_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getFriendDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:47 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(104): CodeIgniter\Database\BaseConnection->query('CALL getAmountO...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(72): App\Models\Friends_model->getFriendRequestNotifications(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriendRequestNotifications()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:53 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(21): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(22): App\Models\Map_model->get_my_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getMyDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:54 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(45): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(44): App\Models\Map_model->search('')
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->searching()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:11:57 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(21): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(22): App\Models\Map_model->get_my_discoveries()
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->getMyDiscoveries()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:12:03 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(45): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(44): App\Models\Map_model->search('test')
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->searching()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:12:07 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Map_model.php(45): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.D...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\MapController.php(44): App\Models\Map_model->search('test')
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\MapController->searching()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapController))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:32:36 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(104): CodeIgniter\Database\BaseConnection->query('CALL getAmountO...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(72): App\Models\Friends_model->getFriendRequestNotifications(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriendRequestNotifications()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:28 --> Maximum execution time of 30 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-11-27 08:50:30 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(36): CodeIgniter\Database\BaseConnection->query('SELECT friends....')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(17): App\Models\Friends_model->get_friends(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriends()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:50:30 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(86): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.U...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(62): App\Models\Friends_model->get_friend_request(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriendRequest()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-11-27 08:50:32 --> Unable to connect to the database.
+#0 C:\Users\lijne\Documents\intelliJ\a20ux1\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Models\Friends_model.php(86): CodeIgniter\Database\BaseConnection->query('SELECT a20ux1.U...')
+#2 C:\Users\lijne\Documents\intelliJ\a20ux1\app\Controllers\Friends.php(62): App\Models\Friends_model->get_friend_request(NULL)
+#3 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(918): App\Controllers\Friends->getFriendRequest()
+#4 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Friends))
+#5 C:\Users\lijne\Documents\intelliJ\a20ux1\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\lijne\Documents\intelliJ\a20ux1\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
