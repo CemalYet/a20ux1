@@ -33,4 +33,10 @@ class User_model extends Model{
         return $data;
     }
 
+    public function getCurrentData($id){
+        $this->db = \Config\Database::connect();
+        $query_text = 'SELECT userId, userName, emailAddress, avatar FROM a20ux1.UserTable WHERE userId = ?;';
+        $query = $this->db->query($query_text, $id);
+        return $query->getResult();
+    }
 }
