@@ -25,8 +25,8 @@ class Share_model extends Model
     }
     public function get_discoveryId($userId)
     {
-        $query="SELECT a20ux1.DiscoveryTable.discoveryId FROM a20ux1.DiscoveryTable where a20ux1.DiscoveryTable.userIdFk={$userId} ORDER BY a20ux1.DiscoveryTable.discoveryId DESC LIMIT 1";
-        return $query->getResult();
+        $query_text="SELECT a20ux1.DiscoveryTable.discoveryId FROM a20ux1.DiscoveryTable where a20ux1.DiscoveryTable.userIdFk={$userId} ORDER BY a20ux1.DiscoveryTable.discoveryId DESC LIMIT 1";
+        return $query = $this->db->query($query_text);
     }
     public function saveTag($data){
         $session = \Config\Services::session();
