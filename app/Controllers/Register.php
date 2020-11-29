@@ -59,13 +59,17 @@ class Register extends \CodeIgniter\Controller
     }
 
     public function checklogin() {
-        $data = [
-            'email'         => $this->JSON_DATA['my_email'],
-            'password'      => $this->JSON_DATA['my_password']
+        $new_data = [
+            'email'         => $this->request->getVar('my_email'),
+            'password'      => $this->request->getVar('my_password')
         ];
-        $data['password'] = $this->hash_password($data['password']);
-        $this->user_model->login($data);
-        //return $this->response->setJSON($data);
+        //$new_data['new_password'] = $this->hash_password($new_data['password']);
+        $data = $this->user_model->login($new_data);
+        if(password_verify($new_data['password'], $data[0]->passHash)){
+            echo 'Password is valid';
+        } else {
+            echo 'Not valid';
+        }
     }
 
 }
