@@ -11,7 +11,7 @@ class Login extends Controller
         echo view('loginpage');
     }
 
-    public function auth()
+    public function auth2()
     {
         $session = session();
         $model = new User_model();
@@ -43,6 +43,17 @@ class Login extends Controller
             $session->setFlashdata('msg', 'Username not Found');
             return redirect()->to('/public/login');
         }
+    }
+
+    public function auth()
+    {
+        $data = [
+            'username' => $this->JSON_DATA['my_username'],
+            'emailaddress' => $this->JSON_DATA['my_email'],
+            'password' => $this->JSON_DATA['my_password']
+        ];
+        
+
     }
 
     public function logout()

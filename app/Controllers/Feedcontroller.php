@@ -25,8 +25,10 @@ class Feedcontroller extends BaseController
     }
 
     public function getUserData(){
-        $data = $this->discovery_model->get_user_info();
-        echo json_encode($data);
+        $email = $this->request->getVar('data');
+        $data = $this->discovery_model->get_user_info($email);
+        return $this->response->setJSON($data);
+
     }
 
 }

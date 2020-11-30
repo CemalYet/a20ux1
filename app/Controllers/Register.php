@@ -6,6 +6,16 @@ use App\Models\Reminder_model;
 
 class Register extends \CodeIgniter\Controller
 {
+    private $user_model;
+    private $JSON_DATA;
+
+    public function __construct()
+    {
+        $this->user_model = new User_model();
+        $this->JSON_DATA = (array)json_decode(file_get_contents("php://input"));
+    }
+
+
     public function index()
     {
         //include helper form
@@ -16,95 +26,49 @@ class Register extends \CodeIgniter\Controller
 
     public function save()
     {
-        //include helper form
-        helper(['form']);
-
-        //set rules validation form
-        $rules = [
-            'username' => 'required|min_length[3]|max_length[20]|is_unique[UserTable.userName]',
-            'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[UserTable.emailAddress]',
-            'password' => 'required|min_length[8]|max_length[255]',
-            'password_confirm' => 'matches[password]'
-        ];
-
-        if($this->validate($rules)){
-            $session = session();
-            $model = new User_model();
-            $data = [
-                'userName'      => $this->request->getVar('username'),
-                'emailAddress'  => $this->request->getVar('email'),
-                'passHash'      => $this->request->getVar('password')
-            ];
-            $model->save($data);
-
-            $newData = $model->where('userName', $data['userName'])->first();
-            $ses_data = [
-                'userId'       => $newData['userId'],
-                'userName'     => $newData['userName'],
-                'emailAddress' => $newData['emailAddress'],
-                'loggedIn'     => TRUE
-            ];
-            $session->set($ses_data);
-
-            //$session->setFlashdata('success', 'Successful Registration');
-
-            return redirect()->to('/public/registrationsteptwo');
-        }
-        else{
-            $data['validation'] = $this->validator;
-        }
-
-        echo view('registrationstepone', $data);
-    }
-
-    public function registrationsteptwo() {
-        return view('registrationsteptwo');
-    }
-
-    public function getUseLocation() {
-        $model = new User_model();
         $session = session();
-
-        if(isset($_POST['locationCheckbox'])){
-            $locationCheck = 1;
-        }
-        else {
-            $locationCheck = 0;
-        }
-
         $data = [
-            'userId'      => $session->get('userId'),
-            'useLocation' => $locationCheck
+            'userName'      => $this->JSON_DATA['my_username'],
+            'emailAddress'  => $this->JSON_DATA['my_email'],
+            'password'      => $this->JSON_DATA['my_password'],
+            'location'      => $this->JSON_DATA['my_location'],
+            'days'          => $this->JSON_DATA['my_days']
         ];
-
-        $model->save($data);
-
-        return redirect()->to('/public/registrationstepthree');
-    }
-
-    public function registrationstepthree() {
-        return view('registrationstepthree');
-    }
-
-    public function getDays() {
-        $model = new Reminder_model();
-        $session = session();
-
-        if(isset($_POST['days'])){
-            $reminders = $_POST['days'];
-            foreach ($reminders as $value) {
-                $data = [
-                    'userIdFk'    => $session->get('userId'),
-                    'day'         => "$value"
-                ];
-                $model->save($data);
-            }
+        $data['password'] = $this->hash_password($data['password']);
+        $this->user_model->saveToDb($data);
+        
+        $user_id = $this->user_model->getUserId($data);
+        
+        foreach($data['days'] as $value){
+            $insertData = [
+                'userId'    => $user_id[0]->userId,
+                'day'       => $value
+            ];
+            $this->user_model->saveDaysToDb($insertData);
         }
-
-        return redirect()->to('/public/registrationdone');
     }
 
-    public function registrationdone() {
-        return view('registrationdone');
+    private function hash_password($password){
+        return password_hash($password, PASSWORD_BCRYPT);
     }
+
+    public function checkemail() {
+        $req = $this->request->getVar('data');
+        $data = $this->user_model->check_email($req);
+        return $this->response->setJSON($data);
+    }
+
+    public function checklogin() {
+        $new_data = [
+            'email'         => $this->request->getVar('my_email'),
+            'password'      => $this->request->getVar('my_password')
+        ];
+        $data = $this->user_model->login($new_data);
+        if(password_verify($new_data['password'], $data[0]->passHash)){
+            echo 'Password is valid';
+        } else {
+            echo 'Not valid';
+        }
+    }
+
 }
