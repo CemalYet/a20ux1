@@ -63,8 +63,19 @@ class Register extends \CodeIgniter\Controller
             'email'         => $this->request->getVar('my_email'),
             'password'      => $this->request->getVar('my_password')
         ];
-        $data = $this->user_model->login($new_data);
-        if(password_verify($new_data['password'], $data[0]->passHash)){
+        $db_data = $this->user_model->login($new_data);
+        if(password_verify($new_data['password'], $db_data[0]->passHash)){
+
+            //create a session
+            $session = session();
+            $ses_data = [
+                'userId'       => $db_data[0]->userId,
+                'userName'     => $db_data[0]->userName,
+                'emailAddress' => $new_data['email'],
+                'loggedIn'     => TRUE
+            ];
+            $session->set($ses_data);
+
             echo 'Password is valid';
         } else {
             echo 'Not valid';

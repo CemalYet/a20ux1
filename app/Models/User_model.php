@@ -69,15 +69,15 @@ class User_model extends Model{
     public function login($data) {
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "SELECT a20ux1.UserTable.passHash FROM a20ux1.UserTable WHERE a20ux1.UserTable.emailAddress = '{$data['email']}';";
+        $query_text = "SELECT a20ux1.UserTable.userId, a20ux1.UserTable.userName, a20ux1.UserTable.passHash FROM a20ux1.UserTable WHERE a20ux1.UserTable.emailAddress = '{$data['email']}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function getCurrentData($id){
         $this->db = \Config\Database::connect();
-        $query_text = 'SELECT userId, userName, emailAddress, avatar FROM a20ux1.UserTable WHERE userId = ?;';
-        $query = $this->db->query($query_text, $id);
+        $query_text = "SELECT a20ux1.UserTable.userId, a20ux1.UserTable.userName, a20ux1.UserTable.emailAddress, a20ux1.UserTable.avatar FROM a20ux1.UserTable WHERE userId = '{$id}';";
+        $query = $this->db->query($query_text);
         return $query->getResult();
     }
 }
