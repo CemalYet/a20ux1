@@ -7,6 +7,8 @@ namespace App\Controllers;
 use App\Models\Friends_model;
 
 class Friends extends BaseController
+
+//TODO create constructor:create friends modal and session  in the constructor
 {
     public function getFriends()
     {
@@ -50,7 +52,6 @@ class Friends extends BaseController
 
         return "Friend request sent.";
     }
-
     public function getFriendRequest()
     {
         $session = session();

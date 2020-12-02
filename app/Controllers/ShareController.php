@@ -27,6 +27,9 @@ class ShareController extends BaseController
 
     public function save()
     {
+        $session = session();
+        $userId = $session->get('userId');
+        
         $data = [
             'title' => $this->JSON_DATA['my_title'],
             'hour' => $this->JSON_DATA['my_time'],
@@ -36,13 +39,34 @@ class ShareController extends BaseController
             'leafId' => $this->JSON_DATA['my_leaf'],
             'latitude' => $this->JSON_DATA['my_latitude'],
             'longitude' => $this->JSON_DATA['my_longitude'],
-            'userIdFk' => "43",
+            'taggedFriends'=>$this->JSON_DATA['my_taggedFriends'],
+            'images' => $this->JSON_DATA['images'],
+            'userIdFk'=>$userId//i am not sure from here
         ];
         $data['takenDate'] = $data['date'] . ' ' . $data['hour'];
-        $data['GPSLocation'] = 'POINT (' . $data['latitude'] . ',' . $data['longitude'] . ')';
+
 
         $this->share_model->upload_data($data);
 
-        echo $data['GPSLocation'];
+        $discovery_id = $this->share_model->get_discoveryId($userId);
+
+        
+
+        foreach($data['taggedFriends'] as $value){
+            $insertData = [
+                'discoveryId'  => $discovery_id[0]->discoveryId,
+                'taggedFriends'=> $value
+            ];
+            echo json_encode($insertData);
+            $this->share_model->saveTag($insertData);
+        }
+        
+        foreach($data['images'] as $value){
+            $insertData = [
+                'discoveryId'  => $discovery_id[0]->discoveryId,
+                'images'=> $value->photoPath
+            ];
+            $this->share_model->saveImages($insertData);
+        }
     }
 }
