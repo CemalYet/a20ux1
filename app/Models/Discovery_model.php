@@ -56,10 +56,10 @@ class Discovery_model extends Model{
         return $query->getResult();
     }
 
-    public function get_tags(){
+    public function get_tags($discoveryId){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = 'SELECT a20ux1.TaggedTable.taggedByUserIdFk, a20ux1.UserTable.userName FROM a20ux1.TaggedTable, a20ux1.UserTable WHERE a20ux1.TaggedTable.taggedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.TaggedTable.discoveryIdFk = 2;';
+        $query_text = "SELECT a20ux1.TaggedTable.taggedByUserIdFk, a20ux1.UserTable.userName FROM a20ux1.TaggedTable, a20ux1.UserTable WHERE a20ux1.TaggedTable.taggedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.TaggedTable.discoveryIdFk ={$discoveryId} ;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
@@ -84,7 +84,9 @@ class Discovery_model extends Model{
         $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = {$data['likedByUserIdFk']} AND a20ux1.LikedTable.discoveryIdFk = {$data['discoveryIdFk']};";
         $this->db->query($query_text);
     }
-    
-    
+
+
+
+
 
 }

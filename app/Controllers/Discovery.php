@@ -44,7 +44,10 @@ class Discovery extends BaseController
     }
 
     public function getTags() {
-        $data = $this->discovery_model->get_tags();
+        $session = session();
+        $userId = $session->get('userId');
+        $discoveryId=2;//discoveryid from front end has to be sent
+        $data = $this->discovery_model->get_tags($discoveryId);
         return $this->response->setJSON($data);
     }
 
