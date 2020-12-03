@@ -31,7 +31,7 @@ class Database extends \CodeIgniter\Database\Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'sftp.studev.groept.be',
+        'hostname' => 'mysql.studev.groept.be',
         'username' => 'a20ux1',
         'password' => 'ymvjnaf9q2',
         'database' => 'a20ux1',
