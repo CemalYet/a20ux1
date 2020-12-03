@@ -33,7 +33,7 @@ class Discovery_model extends Model{
     }
 
     public function get_user_discoveries($id) {
-        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title FROM a20ux1.DiscoveryTable, a20ux1.DiscoveryPhotosTable WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryTable.userIdFk = '{$id}') AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1);";
+        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.discoveryId FROM a20ux1.DiscoveryTable, a20ux1.DiscoveryPhotosTable WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryTable.userIdFk = '{$id}') AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1);";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
@@ -56,18 +56,19 @@ class Discovery_model extends Model{
         return $query->getResult();
     }
 
-    public function get_disco_info() {
-        $session = \Config\Services::session();
-        $session->get('ses_data');
-        $query_text = 'SELECT photoPath, takenDate, title, description FROM a20ux1.DiscoveryTable WHERE userIdFk = 16;';
+    public function get_disco_info($discoId) {
+        $query_text = "SELECT a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.description, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
+                        FROM a20ux1.DiscoveryTable
+                            INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId
+                            WHERE a20ux1.DiscoveryTable.discoveryId = '{$discoId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
-    public function get_comments(){
+    public function get_comments($discoId){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = 'SELECT a20ux1.CommentsTable.commentedByUserIdFk, a20ux1.UserTable.avatar, a20ux1.CommentsTable.comment FROM a20ux1.CommentsTable, a20ux1.UserTable WHERE a20ux1.CommentsTable.commentedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.CommentsTable.discoveryIdFk = 2;';
+        $query_text = "SELECT a20ux1.CommentsTable.commentedByUserIdFk, a20ux1.UserTable.avatar, a20ux1.CommentsTable.comment FROM a20ux1.CommentsTable, a20ux1.UserTable WHERE a20ux1.CommentsTable.commentedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.CommentsTable.discoveryIdFk = '{$discoId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

@@ -16,38 +16,27 @@ class Discovery extends BaseController
         $this->JSON_DATA = (array)json_decode(file_get_contents("php://input"));
     }
 
-    public function discopost(){
-        return view('discopost');
-    }
-
-    public function comments(){
-        return view('comments');
-    }
-
-    public function sharedisco(){
-        return view('sharedisco');
-    }
-
     public function getDiscoInfo(){
-        $data = $this->discovery_model->get_disco_info();
+        $discoId = $this->request->getVar('data');
+        $data = $this->discovery_model->get_disco_info($discoId);
         return $this->response->setJSON($data);
     }
 
     public function getUserInfo(){
-        $data = $this->discovery_model->get_user_info();
+        $email = $this->request->getVar('data');
+        $data = $this->discovery_model->get_user_info($email);
         return $this->response->setJSON($data);
     }
 
     public function getComments(){
-        $data = $this->discovery_model->get_comments();
+        $discoId = $this->request->getVar('data');
+        $data = $this->discovery_model->get_comments($discoId);
         return $this->response->setJSON($data);
     }
 
     public function getTags() {
-        $session = session();
-        $userId = $session->get('userId');
-        $discoveryId=2;//discoveryid from front end has to be sent
-        $data = $this->discovery_model->get_tags($discoveryId);
+        $discoId = $this->request->getVar('data');
+        $data = $this->discovery_model->get_tags($discoId);
         return $this->response->setJSON($data);
     }
 
