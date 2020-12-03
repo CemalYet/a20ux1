@@ -38,6 +38,18 @@ class Discovery_model extends Model{
         return $query->getResult();
     }
 
+    public function get_tagged_discoveries($id)
+    {
+        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.discoveryId
+                            FROM a20ux1.DiscoveryTable
+                            INNER JOIN a20ux1.DiscoveryPhotosTable 
+	                            RIGHT JOIN a20ux1.TaggedTable 
+		                            ON a20ux1.DiscoveryPhotosTable.discoveryIdFk = a20ux1.DiscoveryTable.discoveryId AND a20ux1.TaggedTable.discoveryIdFk = a20ux1.DiscoveryTable.discoveryId 
+                                    WHERE a20ux1.DiscoveryPhotosTable.photoOrder = '1' AND a20ux1.TaggedTable.taggedByUserIdFk = '{$id}';";
+        $query = $this->db->query($query_text);
+        return $query->getResult();
+    }
+
     public function get_user_info($emailAddress) {
         $query_text = "SELECT userName, avatar, userId, emailAddress FROM a20ux1.UserTable WHERE emailAddress = '{$emailAddress}';";
         $query = $this->db->query($query_text);
@@ -88,9 +100,6 @@ class Discovery_model extends Model{
         $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = {$data['likedByUserIdFk']} AND a20ux1.LikedTable.discoveryIdFk = {$data['discoveryIdFk']};";
         $this->db->query($query_text);
     }
-
-
-
 
 
 }

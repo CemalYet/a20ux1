@@ -19,6 +19,15 @@ class Profile extends Controller
         echo json_encode($data);
     }
 
+    public function getTaggedDiscoveries(){
+        $model = new Discovery_model();
+        $session = session();
+        $id = $session->get('userId');
+
+        $data = $model->get_tagged_discoveries($id);
+        echo json_encode($data);
+    }
+
     public function getFetchedUserData(){
         $model = new User_model();
 
@@ -99,13 +108,16 @@ class Profile extends Controller
         }
     }
 
-/*    public function getTags(){
-        $model = new Tags_model();
+    /*
+
+    public function getTaggedDiscoveries(){
+        $model = new Discovery_model();
         $session = session();
         $id = $session->get('userId');
-        $data = $model->get_user_tags($id);
+        $data = $model->get_tagged_discoveries($id);
         echo json_encode($data);
     }
+
 
     public function getBadges(){
         $model = new Badges_model();
