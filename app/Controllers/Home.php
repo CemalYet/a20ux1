@@ -19,14 +19,6 @@ class Home extends \CodeIgniter\Controller
     }
 
     public function home() {
-        $session = session();
-        $ses_data = [
-            'userId'       => '18',
-            'userName'     => 'cemal',
-            'emailAddress' => 'yetismiscemal34@gmail.com',
-            'loggedIn'     => TRUE
-        ];
-        $session->set($ses_data);
 
         return view('index');
     }

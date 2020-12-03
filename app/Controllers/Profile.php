@@ -8,13 +8,6 @@ use App\Models\Badges_model;*/
 
 class Profile extends Controller
 {
-    public function index()
-    {
-        // $session = session();
-        // echo "Welcome back, ".$session->get('userName');
-        return view('profile');
-        //$this->getOwnDiscoveries();
-    }
 
     public function getOwnDiscoveries(){
         $model = new Discovery_model();

@@ -33,8 +33,8 @@ class Discovery_model extends Model{
     }
 
     public function get_user_discoveries($id) {
-        $query_text = 'SELECT a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title FROM a20ux1.DiscoveryTable WHERE a20ux1.DiscoveryTable.userIdFk = ?;';
-        $query = $this->db->query($query_text, $id);
+        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title FROM a20ux1.DiscoveryTable, a20ux1.DiscoveryPhotosTable WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryTable.userIdFk = '{$id}') AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1);";
+        $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
