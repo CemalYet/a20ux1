@@ -57,7 +57,6 @@ class ShareController extends BaseController
                 'discoveryId'  => $discovery_id[0]->discoveryId,
                 'taggedFriends'=> $value
             ];
-            echo json_encode($insertData);
             $this->share_model->saveTag($insertData);
         }
         
@@ -68,5 +67,7 @@ class ShareController extends BaseController
             ];
             $this->share_model->saveImages($insertData);
         }
+
+        return $this->response->setJSON($discovery_id);
     }
 }
