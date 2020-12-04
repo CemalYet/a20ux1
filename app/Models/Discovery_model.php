@@ -18,7 +18,7 @@ class Discovery_model extends Model{
         $this->db = \Config\Database::connect();
     }
 
-    public function get_feed_data() {
+    public function get_feed_data($id) {
 
         //get friends
         $session = \Config\Services::session();
@@ -27,7 +27,7 @@ class Discovery_model extends Model{
         //populate friends info
 
         //get discoveries
-        $query_text = 'SELECT a20ux1.DiscoveryTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk WHERE userId=(SELECT DISTINCT userId_2 FROM a20ux1.FriendsTable WHERE userId_1=11);';
+        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar FROM a20ux1.DiscoveryPhotosTable, a20ux1.DiscoveryTable  INNER JOIN a20ux1.UserTable ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1) AND (userId=(SELECT a20ux1.FriendsTable.sender FROM a20ux1.FriendsTable WHERE (receiver='{$id}'))) OR (userId=(SELECT a20ux1.FriendsTable.receiver FROM a20ux1.FriendsTable WHERE (sender='{$id}')));";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

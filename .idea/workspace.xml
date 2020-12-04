@@ -28,7 +28,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17ddbcd7-66bd-4b7a-a5c2-18e697a2da8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Discovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Discovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Feedcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Feedcontroller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Discovery_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discovery_model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

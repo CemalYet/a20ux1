@@ -20,7 +20,9 @@ class Feedcontroller extends BaseController
     }
 
     public function getDiscoveries(){
-        $data = $this->discovery_model->get_feed_data();
+        $session = session();
+        $id = $session->get('userId');
+        $data = $this->discovery_model->get_feed_data($id);
         echo json_encode($data);
     }
 
