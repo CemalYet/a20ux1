@@ -59,7 +59,6 @@ class Badge_model extends Model
             $query_text = "UPDATE `a20ux1`.`BadgeUser` SET `completed` = 1 WHERE (`badgeIdFk` = '{$comp->isCompleted}') AND (`userIdFk` = '{$userId}');";
             $this->db->query($query_text);
 
-
             // Enrol in the next challenge
             if (in_array((int)$comp->isCompleted, $this->badge_id_newcomer)) {
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_newcomer);
@@ -161,8 +160,24 @@ class Badge_model extends Model
     // Return all the badges
     public function show_all_badges($userId)
     {
-        $query_text = "SELECT a20ux1.BadgeBasicTable.title, a20ux1.BadgeBasicTable.description, a20ux1.BadgeUser.currentPoints, a20ux1.BadgeBasicTable.reqPoints FROM a20ux1.BadgeUser INNER JOIN a20ux1.BadgeBasicTable ON a20ux1.BadgeUser.badgeIdFk = a20ux1.BadgeBasicTable.badgeBasicId AND a20ux1.BadgeUser.userIdFk = '{$userId}';";
+        $query_text = "SELECT a20ux1.BadgeBasicTable.title, a20ux1.BadgeBasicTable.description, a20ux1.BadgeUser.currentPoints, a20ux1.BadgeBasicTable.reqPoints, a20ux1.BadgeUser.completed FROM a20ux1.BadgeUser INNER JOIN a20ux1.BadgeBasicTable ON a20ux1.BadgeUser.badgeIdFk = a20ux1.BadgeBasicTable.badgeBasicId AND a20ux1.BadgeUser.userIdFk = '{$userId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
+    }
+
+    // Enroll user into challenges
+    public function enroll($userId) {
+        $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_newcomer[0]}', '{$userId}', '0', 0);";
+        $this->db->query($query_text);
+        $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_explorer[0]}', '{$userId}', '0', 0);";
+        $this->db->query($query_text);
+        $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_team_player[0]}', '{$userId}', '0', 0);";
+        $this->db->query($query_text);
+        $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_tenacious[0]}', '{$userId}', '0', 0);";
+        $this->db->query($query_text);
+        $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_seniority[0]}', '{$userId}', '0', 0);";
+        $this->db->query($query_text);
+        echo "Enrolled userId: " . $userId . "<br>";
+        return true;
     }
 }

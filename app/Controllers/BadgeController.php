@@ -7,7 +7,7 @@ use App\Models\Badge_model;
 class BadgeController extends Controller
 {
     private $badge_model;
-    private $userId = 18;
+    private $userId = 16;
 
     public function __construct()
     {
@@ -34,5 +34,10 @@ class BadgeController extends Controller
         //$userId = $this->request->getVar('userId');
         $data = $this->badge_model->show_all_badges($this->userId);
         return $this->response->setJSON($data);
+    }
+
+    public function enrollUSer() {
+        //$userId = $this->request->getVar('userId');
+        $this->badge_model->enroll($this->userId);
     }
 }
