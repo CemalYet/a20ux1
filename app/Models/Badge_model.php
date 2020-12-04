@@ -65,22 +65,27 @@ class Badge_model extends Model
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_newcomer);
                 $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_newcomer[$position+1]}', '{$userId}', '0', 0);";
                 $this->db->query($query_text);
+                $this->get_challenges($userId);
             } elseif (in_array((int)$comp->isCompleted, $this->badge_id_explorer)) {
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_explorer);
                 $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_explorer[$position+1]}', '{$userId}', '0', 0);";
                 $this->db->query($query_text);
+                $this->get_challenges($userId);
             } elseif (in_array((int)$comp->isCompleted, $this->badge_id_team_player)) {
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_team_player);
                 $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_team_player[$position+1]}', '{$userId}', '0', 0);";
                 $this->db->query($query_text);
+                $this->get_challenges($userId);
             } elseif (in_array((int)$comp->isCompleted, $this->badge_id_tenacious)) {
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_tenacious);
                 $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_tenacious[$position+1]}', '{$userId}', '0', 0);";
                 $this->db->query($query_text);
+                $this->get_challenges($userId);
             } elseif (in_array((int)$comp->isCompleted, $this->badge_id_seniority)) {
                 $position = array_search((int)$comp->isCompleted, $this->badge_id_seniority);
                 $query_text = "INSERT INTO `a20ux1`.`BadgeUser` (`badgeIdFk`, `userIdFk`, `currentPoints`, `completed`) VALUES ('{$this->badge_id_seniority[$position+1]}', '{$userId}', '0', 0);";
                 $this->db->query($query_text);
+                $this->get_challenges($userId);
             }
         }
     }
@@ -92,6 +97,7 @@ class Badge_model extends Model
         $query_1 = $this->db->query($query_text_1);
         $count = count($query_1->getResult());
 
+        // Update 'currentPoints' in the database
         $query_text_2 = "UPDATE `a20ux1`.`BadgeUser` SET `currentPoints` = '{$count}' WHERE (`badgeIdFk` = '{$badgeId}') AND (`userIdFk` = '{$userId}');";
         $this->db->query($query_text_2);
     }
@@ -103,6 +109,7 @@ class Badge_model extends Model
         $query_1 = $this->db->query($query_text_1);
         $count = $query_1->getResult();
 
+        // Update 'currentPoints' in the database
         $query_text_2 = "UPDATE `a20ux1`.`BadgeUser` SET `currentPoints` = '{$count[0]->Count}' WHERE (`badgeIdFk` = '{$badgeId}') AND (`userIdFk` = '{$userId}');";
         $this->db->query($query_text_2);
     }
@@ -114,6 +121,7 @@ class Badge_model extends Model
         $query_1 = $this->db->query($query_text_1);
         $count = $query_1->getResult();
 
+        // Update 'currentPoints' in the database
         $query_text_2 = "UPDATE `a20ux1`.`BadgeUser` SET `currentPoints` = '{$count[0]->Count}' WHERE (`badgeIdFk` = '{$badgeId}') AND (`userIdFk` = '{$userId}');";
         $this->db->query($query_text_2);
     }
@@ -125,6 +133,7 @@ class Badge_model extends Model
         $query_1 = $this->db->query($query_text_1);
         $count = $query_1->getResult();
 
+        // Update 'currentPoints' in the database
         $query_text_2 = "UPDATE `a20ux1`.`BadgeUser` SET `currentPoints` = '{$count[0]->Count}' WHERE (`badgeIdFk` = '{$badgeId}') AND (`userIdFk` = '{$userId}');";
         $this->db->query($query_text_2);
     }
@@ -136,6 +145,7 @@ class Badge_model extends Model
         $query_1 = $this->db->query($query_text_1);
         $time_diff = $query_1->getResult();
 
+        // Update 'currentPoints' in the database
         $query_text_2 = "UPDATE `a20ux1`.`BadgeUser` SET `currentPoints` = '{$time_diff[0]->TimeDiff}' WHERE (`badgeIdFk` = '{$badgeId}') AND (`userIdFk` = '{$userId}');";
         $this->db->query($query_text_2);
     }
