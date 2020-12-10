@@ -28,7 +28,8 @@
   <component name="ChangeListManager">
     <list default="true" id="17ddbcd7-66bd-4b7a-a5c2-18e697a2da8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Feedcontroller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Feedcontroller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Discovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Discovery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Discovery_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discovery_model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +87,9 @@
       <workItem from="1607002744156" duration="5990000" />
       <workItem from="1607013506966" duration="3597000" />
       <workItem from="1607031223825" duration="4309000" />
+      <workItem from="1607369205989" duration="1587000" />
+      <workItem from="1607536089968" duration="3818000" />
+      <workItem from="1607588729006" duration="5171000" />
     </task>
     <task id="LOCAL-00001" summary="readying for V1.0">
       <created>1607011777236</created>
@@ -101,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607017371861</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Minor changes/fixes">
+      <created>1607080822341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607080822341</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +146,8 @@
     <MESSAGE value="Trying to merge" />
     <MESSAGE value="readying for V1.0" />
     <MESSAGE value="working on v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on v1.0" />
+    <MESSAGE value="Minor changes/fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor changes/fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3367" y="234" key="#Deployment" timestamp="1606947431355">
@@ -151,6 +163,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606826396042" />
+    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1607080812860">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607080812860" />
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1606826154782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -167,10 +183,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1606753904744" />
-    <state x="3552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1607017379216">
-      <screen x="3000" y="0" width="1920" height="1040" />
+    <state x="442" y="190" key="Vcs.Push.Dialog.v2" timestamp="1607080837990">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="3552" y="240" key="Vcs.Push.Dialog.v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1607017379216" />
+    <state x="442" y="190" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607080837990" />
     <state x="3777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607011783043">
       <screen x="3000" y="0" width="1920" height="1040" />
     </state>

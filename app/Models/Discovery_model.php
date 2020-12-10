@@ -85,10 +85,10 @@ WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discovery
         return $query->getResult();
     }
 
-    public function upload_data($data){
+    public function upload_comment($data){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "INSERT INTO a20ux1.CommentsTable (commentedByUserIdFk, discoveryIdFk, comment) VALUES ('11', '2', '{$data['newComment']}');";
+        $query_text = "INSERT INTO a20ux1.CommentsTable (commentedByUserIdFk, discoveryIdFk, comment) VALUES ('{$data['userId']}', '{$data['discoId']}', '{$data['comment']}');";
         $this->db->query($query_text);
     }
 

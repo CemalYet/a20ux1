@@ -41,9 +41,14 @@ class Discovery extends BaseController
     }
 
     public function savecomment(){
-        $data = ['newComment' => $this->JSON_DATA['my_comment']];
-        $this->discovery_model->upload_data($data);
-        echo $data['newComment'];
+        //$data = $this->request->getVar('newComment');
+        $data = [
+            'userId' => $this->JSON_DATA['userId'],
+            'discoId' => $this->JSON_DATA['discoId'],
+            'comment' => $this->JSON_DATA['comment']
+        ];
+        $this->discovery_model->upload_comment($data);
+        echo $data['discoId'];
     }
 
     public function savelike() {

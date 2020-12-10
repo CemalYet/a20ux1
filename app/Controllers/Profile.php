@@ -18,6 +18,14 @@ class Profile extends Controller
         //$data = $model->where('userIdFk', '.$id.');
         echo json_encode($data);
     }
+    
+    public function getUserDiscoveries(){
+        $model = new Discovery_model();
+        $userId = $this->request->getVar('data');
+        $data = $model->get_user_discoveries($userId);
+        return $this->response->setJSON($data);
+        
+    }
 
     public function getTaggedDiscoveries(){
         $model = new Discovery_model();
