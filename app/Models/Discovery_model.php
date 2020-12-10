@@ -27,11 +27,18 @@ class Discovery_model extends Model{
         //populate friends info
 
         //get discoveries
-        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
-FROM a20ux1.DiscoveryPhotosTable, a20ux1.DiscoveryTable
+        $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
+FROM a20ux1.DiscoveryTable
+INNER JOIN (SELECT a20ux1.FriendsTable.sender as userId FROM a20ux1.FriendsTable WHERE a20ux1.FriendsTable.receiver = '{$id}'
+									UNION
+									SELECT a20ux1.FriendsTable.receiver FROM a20ux1.FriendsTable WHERE a20ux1.FriendsTable.sender = '{$id}') users
+ON a20ux1.DiscoveryTable.userIdFk = users.userId
 INNER JOIN a20ux1.UserTable 
-ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk 
-WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1) AND ((userId=(SELECT a20ux1.FriendsTable.sender FROM a20ux1.FriendsTable WHERE (receiver='${id}'))) OR (userId=(SELECT a20ux1.FriendsTable.receiver FROM a20ux1.FriendsTable WHERE (sender='${id}'))));";
+ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk
+INNER JOIN
+(select * from (select*, row_number() over(
+partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
