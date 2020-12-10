@@ -54,7 +54,7 @@ class User_model extends Model{
     public function saveToDb($data){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "INSERT INTO a20ux1.UserTable (userName, emailAddress, passHash, useLocation) VALUES ('{$data['userName']}', '{$data['emailAddress']}', '{$data['password']}', {$data['location']});";
+        $query_text = "INSERT INTO a20ux1.UserTable (userName, emailAddress, passHash, useLocation, creationDate) VALUES ('{$data['userName']}', '{$data['emailAddress']}', '{$data['password']}', {$data['location']}, now());";
         $this->db->query($query_text);
     }
 
