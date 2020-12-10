@@ -160,7 +160,7 @@ class Badge_model extends Model
     // Return all the badges
     public function show_all_badges($userId)
     {
-        $query_text = "SELECT a20ux1.BadgeBasicTable.title, a20ux1.BadgeBasicTable.description, a20ux1.BadgeUser.currentPoints, a20ux1.BadgeBasicTable.reqPoints, a20ux1.BadgeUser.completed FROM a20ux1.BadgeUser INNER JOIN a20ux1.BadgeBasicTable ON a20ux1.BadgeUser.badgeIdFk = a20ux1.BadgeBasicTable.badgeBasicId AND a20ux1.BadgeUser.userIdFk = '{$userId}';";
+        $query_text = "SELECT a20ux1.BadgeBasicTable.badgeBasicId,a20ux1.BadgeBasicTable.title, a20ux1.BadgeBasicTable.description, a20ux1.BadgeUser.currentPoints, a20ux1.BadgeBasicTable.reqPoints, a20ux1.BadgeUser.completed FROM a20ux1.BadgeUser INNER JOIN a20ux1.BadgeBasicTable ON a20ux1.BadgeUser.badgeIdFk = a20ux1.BadgeBasicTable.badgeBasicId AND a20ux1.BadgeUser.userIdFk = '{$userId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
