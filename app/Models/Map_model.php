@@ -11,19 +11,16 @@ class Map_model extends Model
     public function __construct()
     {
         $this->db = \Config\Database::connect();
-        $session = \Config\Services::session()->get('ses_data');
-        $this->userId = $session['userId'];
-        $this->userId = 17;
     }
 
-    public function get_my_discoveries() {
-        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.UserTable.userId= '{$this->userId}' AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;";
+    public function get_my_discoveries($userId) {
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.UserTable.userId= '{$userId}' AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
-    public function get_friend_discoveries() {
-        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.DiscoveryTable.userIdFk IN (SELECT DISTINCT sender FROM a20ux1.FriendsTable WHERE receiver='{$this->userId}' AND state=1 UNION SELECT DISTINCT receiver FROM a20ux1.FriendsTable WHERE sender='{$this->userId}' AND state=1) AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;";
+    public function get_friend_discoveries($userId) {
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE a20ux1.DiscoveryTable.userIdFk IN (SELECT DISTINCT sender FROM a20ux1.FriendsTable WHERE receiver='{$userId}' AND state=1 UNION SELECT DISTINCT receiver FROM a20ux1.FriendsTable WHERE sender='{$userId}' AND state=1) AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
