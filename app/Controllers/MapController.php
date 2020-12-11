@@ -19,12 +19,14 @@ class MapController extends BaseController
     }
 
     public function getMyDiscoveries(){
-        $data = $this->map_model->get_my_discoveries();
+        $userId = $this->request->getVar('userId');
+        $data = $this->map_model->get_my_discoveries($userId);
         return $this->response->setJSON($data);
     }
 
     public function getFriendDiscoveries(){
-        $data = $this->map_model->get_friend_discoveries();
+        $userId = $this->request->getVar('userId');
+        $data = $this->map_model->get_friend_discoveries($userId);
         return $this->response->setJSON($data);
     }
 

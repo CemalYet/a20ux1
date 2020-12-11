@@ -7,7 +7,7 @@ use App\Models\Badge_model;
 class BadgeController extends Controller
 {
     private $badge_model;
-    private $userId = 18;
+    //private $userId = 130;
 
     public function __construct()
     {
@@ -20,24 +20,24 @@ class BadgeController extends Controller
     }
 
     public function checkChallenges() {
-        //$userId = $this->request->getVar('userId');
-        $this->badge_model->get_challenges($this->userId);
+        $userId = $this->request->getVar('userId');
+        $this->badge_model->get_challenges($userId);
     }
 
     public function showBadges() {
-        //$userId = $this->request->getVar('userId');
-        $data = $this->badge_model->show_badges($this->userId);
+        $userId = $this->request->getVar('userId');
+        $data = $this->badge_model->show_badges($userId);
         return $this->response->setJSON($data);
     }
 
     public function showALLBadges() {
-        //$userId = $this->request->getVar('userId');
-        $data = $this->badge_model->show_all_badges($this->userId);
+        $userId = $this->request->getVar('userId');
+        $data = $this->badge_model->show_all_badges($userId);
         return $this->response->setJSON($data);
     }
 
     public function enrollUSer() {
-        //$userId = $this->request->getVar('userId');
-        $this->badge_model->enroll($this->userId);
+        $userId = $this->request->getVar('userId');
+        $this->badge_model->enroll($userId);
     }
 }
