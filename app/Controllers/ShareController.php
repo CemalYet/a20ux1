@@ -20,11 +20,6 @@ class ShareController extends BaseController
         $this->JSON_DATA = (array)json_decode(file_get_contents("php://input"));
     }
 
-    public function share()
-    {
-        return view('index');
-    }
-
     public function save()
     {
         $session = session();

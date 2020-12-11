@@ -43,7 +43,7 @@ class Profile extends Controller
         $userId = $_POST['userId'];
 
         // get user's data from database
-        $data = $model->find($userId);
+        $data = $model->getCurrentData($userId);
 
         echo json_encode($data);
     }

@@ -44,19 +44,27 @@ on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
     }
 
     public function get_user_discoveries($id) {
-        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.discoveryId FROM a20ux1.DiscoveryTable, a20ux1.DiscoveryPhotosTable WHERE (a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk) AND (a20ux1.DiscoveryTable.userIdFk = '{$id}') AND (a20ux1.DiscoveryPhotosTable.photoOrder = 1);";
+        $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.discoveryId 
+FROM a20ux1.DiscoveryTable
+INNER JOIN
+(select * from (select*, row_number() over(
+partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+WHERE a20ux1.DiscoveryTable.userIdFk = '{$id}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function get_tagged_discoveries($id)
     {
-        $query_text = "SELECT a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryTable.discoveryId
-                            FROM a20ux1.DiscoveryTable
-                            INNER JOIN a20ux1.DiscoveryPhotosTable 
-	                            RIGHT JOIN a20ux1.TaggedTable 
-		                            ON a20ux1.DiscoveryPhotosTable.discoveryIdFk = a20ux1.DiscoveryTable.discoveryId AND a20ux1.TaggedTable.discoveryIdFk = a20ux1.DiscoveryTable.discoveryId 
-                                    WHERE a20ux1.DiscoveryPhotosTable.photoOrder = '1' AND a20ux1.TaggedTable.taggedByUserIdFk = '{$id}';";
+        $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.discoveryId
+FROM a20ux1.DiscoveryTable
+INNER JOIN (SELECT * FROM a20ux1.TaggedTable WHERE a20ux1.TaggedTable.taggedByUserIdFk = '{$id}') as taggedDiscoveries
+ON a20ux1.DiscoveryTable.discoveryId = taggedDiscoveries.discoveryIdFk
+INNER JOIN
+(select * from (select*, row_number() over(
+partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
@@ -79,7 +87,7 @@ on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
     public function get_comments($discoId){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "SELECT a20ux1.CommentsTable.commentedByUserIdFk, a20ux1.UserTable.avatar, a20ux1.CommentsTable.comment FROM a20ux1.CommentsTable, a20ux1.UserTable WHERE a20ux1.CommentsTable.commentedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.CommentsTable.discoveryIdFk = '{$discoId}';";
+        $query_text = "SELECT a20ux1.CommentsTable.commentedByUserIdFk, a20ux1.UserTable.avatar, a20ux1.UserTable.userName,  a20ux1.CommentsTable.comment FROM a20ux1.CommentsTable, a20ux1.UserTable WHERE a20ux1.CommentsTable.commentedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.CommentsTable.discoveryIdFk = '{$discoId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
