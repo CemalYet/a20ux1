@@ -38,7 +38,8 @@ ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk
 INNER JOIN
 (select * from (select*, row_number() over(
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
-on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+ORDER BY takenDate desc;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

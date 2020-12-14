@@ -36,7 +36,7 @@ class BadgeController extends Controller
         return $this->response->setJSON($data);
     }
 
-    public function enrollUSer() {
+    public function enrollUser() {
         $userId = $this->request->getVar('userId');
         $this->badge_model->enroll($userId);
     }
