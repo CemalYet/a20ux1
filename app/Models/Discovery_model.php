@@ -134,5 +134,11 @@ WHERE a20ux1.LikedTable.discoveryIdFk = '{$discoId}';";
         $this->db->query($query_text);
     }
 
+    public function get_heart_button($discoId){
+        $query_text = "";
+        $query = $this->db->query($query_text);
+        return $query->getResult();
+    }
+
 
 }

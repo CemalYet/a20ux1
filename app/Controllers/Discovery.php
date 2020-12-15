@@ -77,4 +77,10 @@ class Discovery extends BaseController
         $discoId = $this->request->getVar('data');
         $this->discovery_model->delete_post($discoId);
     }
+    
+    public function getHeartButton() {
+        $discoId = $this->request->getVar('data');
+        $data = $this->discovery_model->get_heart_button($discoId);
+        return $data;
+    }
 }
