@@ -47,4 +47,10 @@ class MapController extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function searchPostToShow(){
+        $req = $this->request->getVar('data');
+        $data = $this->map_model->searchPostToShow($req);
+        return $this->response->setJSON($data);
+    }
+
 }

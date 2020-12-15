@@ -38,7 +38,24 @@ class Map_model extends Model
     }
 
     public function search($req) {
-        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName, a20ux1.DiscoveryPhotosTable.PhotoPath FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND a20ux1.UserTable.useLocation=1 INNER JOIN a20ux1.DiscoveryPhotosTable ON a20ux1.DiscoveryTable.discoveryId = a20ux1.DiscoveryPhotosTable.discoveryIdFk WHERE a20ux1.DiscoveryPhotosTable.PhotoOrder=1 AND (instr(a20ux1.DiscoveryTable.takenDate, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.title, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.description, '{$req}') > 0 OR instr(a20ux1.UserTable.userName, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.location, '{$req}') > 0);";
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName, photo.photoPath FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND a20ux1.UserTable.useLocation=1 INNER JOIN (select * from (select*, row_number() over(
+partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+ WHERE (instr(a20ux1.DiscoveryTable.takenDate, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.title, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.description, '{$req}') > 0 OR instr(a20ux1.UserTable.userName, '{$req}') > 0 OR instr(a20ux1.DiscoveryTable.location, '{$req}') > 0);";
+        $query = $this->db->query($query_text);
+        return $query->getResult();
+    }
+
+    public function searchPostToShow($id){
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, 
+a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName, photo.photoPath 
+FROM a20ux1.DiscoveryTable 
+INNER JOIN a20ux1.UserTable 
+ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId AND a20ux1.UserTable.useLocation=1 
+INNER JOIN (select * from (select*, row_number() over(
+partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+WHERE a20ux1.DiscoveryTable.discoveryId = '{$id}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

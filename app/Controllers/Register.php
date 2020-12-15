@@ -26,7 +26,6 @@ class Register extends \CodeIgniter\Controller
 
     public function save()
     {
-        $session = session();
         $data = [
             'userName'      => $this->JSON_DATA['my_username'],
             'emailAddress'  => $this->JSON_DATA['my_email'],
@@ -46,6 +45,14 @@ class Register extends \CodeIgniter\Controller
             ];
             $this->user_model->saveDaysToDb($insertData);
         }
+        $session = session();
+        $ses_data = [
+            'userId'       => $user_id[0]->userId,
+            'userName'     => $data['my_username'],
+            'emailAddress' => $data['my_email'],
+            'loggedIn'     => TRUE
+        ];
+        $session->set($ses_data);
     }
 
     private function hash_password($password){
