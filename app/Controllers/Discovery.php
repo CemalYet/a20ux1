@@ -40,6 +40,12 @@ class Discovery extends BaseController
         return $this->response->setJSON($data);
     }
 
+    public function getNrOfLikes() {
+        $discoId = $this->request->getVar('data');
+        $data = $this->discovery_model->get_nr_of_likes($discoId);
+        return $data[0]->NrOfLikes;
+    }
+
     public function savecomment(){
         //$data = $this->request->getVar('newComment');
         $data = [
@@ -65,5 +71,10 @@ class Discovery extends BaseController
             'discoveryIdFk' => $this->JSON_DATA['discoId']
         ];
         $this->discovery_model->remove_like($data);
+    }
+    
+    public function deletePost() {
+        $discoId = $this->request->getVar('data');
+        $this->discovery_model->delete_post($discoId);
     }
 }

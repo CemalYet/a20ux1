@@ -100,6 +100,14 @@ on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
         return $query->getResult();
     }
 
+    public function get_nr_of_likes($discoId){
+        $query_text = "SELECT COUNT(a20ux1.LikedTable.discoveryIdFk) AS NrOfLikes
+FROM a20ux1.LikedTable
+WHERE a20ux1.LikedTable.discoveryIdFk = '{$discoId}';";
+        $query = $this->db->query($query_text);
+        return $query->getResult();
+    }
+
     public function upload_comment($data){
         $session = \Config\Services::session();
         $session->get('ses_data');
@@ -118,6 +126,11 @@ on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
         $session = \Config\Services::session();
         $session->get('ses_data');
         $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = {$data['likedByUserIdFk']} AND a20ux1.LikedTable.discoveryIdFk = {$data['discoveryIdFk']};";
+        $this->db->query($query_text);
+    }
+
+    public function delete_post($id){
+        $query_text = "DELETE FROM a20ux1.DiscoveryTable WHERE a20ux1.DiscoveryTable.discoveryId = '{$id}';";
         $this->db->query($query_text);
     }
 
