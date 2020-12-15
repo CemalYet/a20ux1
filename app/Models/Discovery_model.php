@@ -29,9 +29,9 @@ class Discovery_model extends Model{
         //get discoveries
         $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
 FROM a20ux1.DiscoveryTable
-INNER JOIN (SELECT a20ux1.FriendsTable.sender as userId FROM a20ux1.FriendsTable WHERE a20ux1.FriendsTable.receiver = '{$id}'
+INNER JOIN (SELECT a20ux1.FriendsTable.sender as userId FROM a20ux1.FriendsTable WHERE (a20ux1.FriendsTable.receiver = '{$id}') AND (a20ux1.FriendsTable.state = 1)
 									UNION
-									SELECT a20ux1.FriendsTable.receiver FROM a20ux1.FriendsTable WHERE a20ux1.FriendsTable.sender = '{$id}') users
+									SELECT a20ux1.FriendsTable.receiver FROM a20ux1.FriendsTable WHERE (a20ux1.FriendsTable.sender = '{$id}') AND (a20ux1.FriendsTable.state = 1) ) users
 ON a20ux1.DiscoveryTable.userIdFk = users.userId
 INNER JOIN a20ux1.UserTable 
 ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk
