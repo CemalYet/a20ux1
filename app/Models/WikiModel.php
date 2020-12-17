@@ -33,4 +33,11 @@ class WikiModel extends Model
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
+
+    public function get_spots($plant_name)
+    {
+        $query_text = "SELECT count(*) AS number FROM a20ux1.DiscoveryTable WHERE a20ux1.DiscoveryTable.title LIKE '%{$plant_name}%';";
+        $query = $this->db->query($query_text);
+        return $query->getResult();
+    }
 }

@@ -34,4 +34,10 @@ class WikiController extends BaseController
         $data = $this->wiki_model->get_pictures($search);
         return $this->response->setJSON($data);
     }
+
+    public function getSpots(){
+        $plant = $this->request->getVar('plant');
+        $data = $this->wiki_model->get_spots($plant);
+        return $this->response->setJSON($data);
+    }
 }
