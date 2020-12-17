@@ -134,8 +134,10 @@ WHERE a20ux1.LikedTable.discoveryIdFk = '{$discoId}';";
         $this->db->query($query_text);
     }
 
-    public function get_heart_button($discoId){
-        $query_text = "";
+    public function get_heart_button($ids){
+        $query_text = "SELECT a20ux1.LikedTable.likedByUserIdFk
+FROM a20ux1.LikedTable
+WHERE a20ux1.LikedTable.discoveryIdFk = '{$ids['discoId']}' AND a20ux1.LikedTable.likedByUserIdFk = '{$ids['userId']}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

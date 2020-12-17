@@ -79,8 +79,12 @@ class Discovery extends BaseController
     }
     
     public function getHeartButton() {
-        $discoId = $this->request->getVar('data');
-        $data = $this->discovery_model->get_heart_button($discoId);
-        return $data;
+        $session = session();
+        $ids = [
+            'discoId'   => $this->request->getVar('data'),
+            'userId'    => $session->get('userId')
+        ];
+        $data = $this->discovery_model->get_heart_button($ids);
+        echo $data;
     }
 }
