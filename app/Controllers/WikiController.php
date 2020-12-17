@@ -8,7 +8,6 @@ use App\Models\WikiModel;
 class WikiController extends BaseController
 {
     private $wiki_model;
-    //private $userId = 130;
 
     public function __construct()
     {
@@ -20,8 +19,19 @@ class WikiController extends BaseController
     }
 
     public function getWikiData(){
-        $userId = $this->request->getVar('userId');
-        $data = $this->wiki_model->get_wiki_data($userId);
+        $data = $this->wiki_model->get_wiki_data();
+        return $this->response->setJSON($data);
+    }
+
+    public function search(){
+        $search = $this->request->getVar('search');
+        $data = $this->wiki_model->get_search($search);
+        return $this->response->setJSON($data);
+    }
+
+    public function getPictures(){
+        $search = $this->request->getVar('search');
+        $data = $this->wiki_model->get_pictures($search);
         return $this->response->setJSON($data);
     }
 }
