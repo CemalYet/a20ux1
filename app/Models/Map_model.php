@@ -32,7 +32,7 @@ class Map_model extends Model
     }
 
     public function get_discovery_photos($discoId) {
-        $query_text = "SELECT PhotoPath, PhotoOrder FROM a20ux1.DiscoveryPhotosTable WHERE discoveryIdFk = '{$discoId}';";
+        $query_text = "SELECT PhotoPath FROM a20ux1.DiscoveryPhotosTable WHERE discoveryIdFk = '{$discoId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

@@ -28,8 +28,9 @@
   <component name="ChangeListManager">
     <list default="true" id="17ddbcd7-66bd-4b7a-a5c2-18e697a2da8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controllers/Discovery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Discovery.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Discovery_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discovery_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Map_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Map_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Share_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Share_model.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +91,9 @@
       <workItem from="1607536089968" duration="3818000" />
       <workItem from="1607588729006" duration="5171000" />
       <workItem from="1608020138618" duration="9229000" />
-      <workItem from="1608062153376" duration="306000" />
+      <workItem from="1608062153376" duration="951000" />
+      <workItem from="1608120873713" duration="2197000" />
+      <workItem from="1608191772191" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="readying for V1.0">
       <created>1607011777236</created>
@@ -134,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608035858702</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Delete post works">
+      <created>1608062558561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608062558561</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +181,8 @@
     <MESSAGE value="Minor changes/fixes" />
     <MESSAGE value="Feed takes into account if a friends request is accepted" />
     <MESSAGE value="Nr of likes works, delete post (something wrong with query?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nr of likes works, delete post (something wrong with query?)" />
+    <MESSAGE value="Delete post works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete post works" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3367" y="234" key="#Deployment" timestamp="1606947431355">
@@ -187,10 +198,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606826396042" />
-    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1608035855198">
+    <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1608062545755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608035855198" />
+    <state x="369" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608062545755" />
     <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1606826154782">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -207,16 +218,16 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1606753904744" />
-    <state x="442" y="190" key="Vcs.Push.Dialog.v2" timestamp="1608036043058">
+    <state x="442" y="190" key="Vcs.Push.Dialog.v2" timestamp="1608062569762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="3552" y="240" key="Vcs.Push.Dialog.v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1607017379216" />
-    <state x="442" y="190" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608036043058" />
-    <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608036024148">
+    <state x="442" y="190" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608062569762" />
+    <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608121272592">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="3777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1607011783043" />
-    <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608036024148" />
+    <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608121272592" />
     <state x="1138" y="191" width="366" height="588" key="ftp.server.browser" timestamp="1606825818159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

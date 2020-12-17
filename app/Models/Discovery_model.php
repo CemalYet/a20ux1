@@ -36,7 +36,7 @@ ON a20ux1.DiscoveryTable.userIdFk = users.userId
 INNER JOIN a20ux1.UserTable 
 ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk
 INNER JOIN
-(SELECT photoId, discoveryIdFk, photoPath, photoOrder FROM (SELECT a20ux1.DiscoveryPhotosTable.photoId, a20ux1.DiscoveryPhotosTable.discoveryIdFk, a20ux1.DiscoveryPhotosTable.photoPath, a20ux1.DiscoveryPhotosTable.photoOrder , row_number() over(
+(SELECT photoId, discoveryIdFk, photoPath FROM (SELECT a20ux1.DiscoveryPhotosTable.photoId, a20ux1.DiscoveryPhotosTable.discoveryIdFk, a20ux1.DiscoveryPhotosTable.photoPath, row_number() over(
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) AS order_photos WHERE order_photos.row_num = 1) as photo
 on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
         $query = $this->db->query($query_text);

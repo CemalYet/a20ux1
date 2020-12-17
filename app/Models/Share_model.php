@@ -40,7 +40,7 @@ class Share_model extends Model
     public function saveImages($data){
         $session = \Config\Services::session();
         $session->get('ses_data');
-        $query_text = "INSERT INTO a20ux1.DiscoveryPhotosTable (discoveryIdFk, photoPath, photoOrder) VALUES ('{$data['discoveryId']}', '{$data['images']}', '{$data['photoOrder']}');";
+        $query_text = "INSERT INTO a20ux1.DiscoveryPhotosTable (discoveryIdFk, photoPath) VALUES ('{$data['discoveryId']}', '{$data['images']}');";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
