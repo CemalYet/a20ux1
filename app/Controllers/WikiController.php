@@ -19,25 +19,29 @@ class WikiController extends BaseController
     }
 
     public function getWikiData(){
-        $data = $this->wiki_model->get_wiki_data();
+        $userId = $this->request->getVar('userId');
+        $data = $this->wiki_model->get_wiki_data($userId);
         return $this->response->setJSON($data);
     }
 
     public function search(){
         $search = $this->request->getVar('search');
-        $data = $this->wiki_model->get_search($search);
+        $userId = $this->request->getVar('userId');
+        $data = $this->wiki_model->get_search($search, $userId);
         return $this->response->setJSON($data);
     }
 
     public function getPictures(){
         $search = $this->request->getVar('search');
-        $data = $this->wiki_model->get_pictures($search);
+        $userId = $this->request->getVar('userId');
+        $data = $this->wiki_model->get_pictures($search, $userId);
         return $this->response->setJSON($data);
     }
 
     public function getSpots(){
         $plant = $this->request->getVar('plant');
-        $data = $this->wiki_model->get_spots($plant);
+        $userId = $this->request->getVar('userId');
+        $data = $this->wiki_model->get_spots($plant, $userId);
         return $this->response->setJSON($data);
     }
 }
