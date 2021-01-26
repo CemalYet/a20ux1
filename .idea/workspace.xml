@@ -19,18 +19,15 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17ddbcd7-66bd-4b7a-a5c2-18e697a2da8c" name="Default Changelist" comment="">
+    <list default="true" id="17ddbcd7-66bd-4b7a-a5c2-18e697a2da8c" name="Default Changelist" comment="Nr of likes works, delete post (something wrong with query?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Discovery_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Discovery_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Map_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Map_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Share_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Share_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/Friends.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/Friends.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +41,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="reglog" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,7 +52,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1l1u6N6EqWSdfhQpC1XvhNgStVG" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -94,6 +91,13 @@
       <workItem from="1608062153376" duration="951000" />
       <workItem from="1608120873713" duration="2197000" />
       <workItem from="1608191772191" duration="759000" />
+      <workItem from="1609439173528" duration="119000" />
+      <workItem from="1610744253456" duration="209000" />
+      <workItem from="1610744466459" duration="1000" />
+      <workItem from="1610744703402" duration="842000" />
+      <workItem from="1611489054701" duration="33000" />
+      <workItem from="1611688628404" duration="1884000" />
+      <workItem from="1611691424175" duration="1507000" />
     </task>
     <task id="LOCAL-00001" summary="readying for V1.0">
       <created>1607011777236</created>
@@ -161,7 +165,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -198,6 +202,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606826396042" />
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611691544234">
+      <screen x="0" y="25" width="1440" height="801" />
+    </state>
+    <state x="458" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.801@0.25.1440.801" timestamp="1611691544234" />
     <state x="369" y="0" key="CommitChangelistDialog2" timestamp="1608062545755">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -223,11 +231,12 @@
     </state>
     <state x="3552" y="240" key="Vcs.Push.Dialog.v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1607017379216" />
     <state x="442" y="190" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608062569762" />
-    <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608121272592">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="583" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611688635194">
+      <screen x="0" y="25" width="1440" height="801" />
     </state>
     <state x="3777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1500.960/3000.0.1920.1040@3000.0.1920.1040" timestamp="1607011783043" />
     <state x="622" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1608121272592" />
+    <state x="583" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.801@0.25.1440.801" timestamp="1611688635194" />
     <state x="1138" y="191" width="366" height="588" key="ftp.server.browser" timestamp="1606825818159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
