@@ -38,7 +38,9 @@ ON a20ux1.UserTable.userId = a20ux1.DiscoveryTable.userIdFk
 INNER JOIN
 (SELECT photoId, discoveryIdFk, photoPath FROM (SELECT a20ux1.DiscoveryPhotosTable.photoId, a20ux1.DiscoveryPhotosTable.discoveryIdFk, a20ux1.DiscoveryPhotosTable.photoPath, row_number() over(
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) AS order_photos WHERE order_photos.row_num = 1) as photo
-on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+order by a20ux1.DiscoveryTable.takenDate desc
+limit 10;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
@@ -50,7 +52,9 @@ INNER JOIN
 (select * from (select*, row_number() over(
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
 on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
-WHERE a20ux1.DiscoveryTable.userIdFk = '{$id}';";
+WHERE a20ux1.DiscoveryTable.userIdFk = '{$id}'
+order by a20ux1.DiscoveryTable.takenDate desc
+limit 10;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
@@ -64,7 +68,9 @@ ON a20ux1.DiscoveryTable.discoveryId = taggedDiscoveries.discoveryIdFk
 INNER JOIN
 (select * from (select*, row_number() over(
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) as order_photos where order_photos.row_num = 1) as photo
-on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk;";
+on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
+order by a20ux1.DiscoveryTable.takenDate desc
+limit 10;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
