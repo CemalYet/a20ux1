@@ -18,7 +18,7 @@ class Discovery_model extends Model{
         $this->db = \Config\Database::connect();
     }
 
-    public function get_feed_data($id) {
+    public function get_feed_data($id,$feedAmount) {
 
         //get discoveries
         $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
@@ -34,7 +34,7 @@ INNER JOIN
 partition by discoveryIdFk order by photoId) as row_num from a20ux1.DiscoveryPhotosTable) AS order_photos WHERE order_photos.row_num = 1) as photo
 on a20ux1.DiscoveryTable.discoveryId = photo.discoveryIdFk
 order by a20ux1.DiscoveryTable.takenDate desc
-limit 10;";
+limit {$feedAmount};";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }

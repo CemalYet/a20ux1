@@ -22,9 +22,12 @@ class Feedcontroller extends BaseController
     public function getDiscoveries(){
         $session = session();
         $id = $session->get('userId');
-        $data = $this->discovery_model->get_feed_data($id);
+        $feedAmount = $this->request->getVar('data');
+        $data = $this->discovery_model->get_feed_data($id,$feedAmount);
         echo json_encode($data);
     }
+
+
 
     public function getUserData(){
         $email = $this->request->getVar('data');
