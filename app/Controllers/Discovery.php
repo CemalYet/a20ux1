@@ -47,7 +47,6 @@ class Discovery extends BaseController
     }
 
     public function savecomment(){
-        //$data = $this->request->getVar('newComment');
         $data = [
             'userId' => $this->JSON_DATA['userId'],
             'discoId' => $this->JSON_DATA['discoId'],

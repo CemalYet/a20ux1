@@ -20,12 +20,6 @@ class Discovery_model extends Model{
 
     public function get_feed_data($id) {
 
-        //get friends
-        $session = \Config\Services::session();
-        $session->get('ses_data');
-
-        //populate friends info
-
         //get discoveries
         $query_text = "SELECT photo.photoPath, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.leafId, a20ux1.DiscoveryTable.discoveryId, a20ux1.UserTable.userName, a20ux1.UserTable.avatar 
 FROM a20ux1.DiscoveryTable
@@ -91,16 +85,12 @@ limit 10;";
     }
 
     public function get_comments($discoId){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "SELECT a20ux1.CommentsTable.commentedByUserIdFk, a20ux1.UserTable.avatar, a20ux1.UserTable.userName,  a20ux1.CommentsTable.comment FROM a20ux1.CommentsTable, a20ux1.UserTable WHERE a20ux1.CommentsTable.commentedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.CommentsTable.discoveryIdFk = '{$discoId}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function get_tags($discoveryId){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "SELECT a20ux1.TaggedTable.taggedByUserIdFk, a20ux1.UserTable.userName FROM a20ux1.TaggedTable, a20ux1.UserTable WHERE a20ux1.TaggedTable.taggedByUserIdFk = a20ux1.UserTable.userId AND a20ux1.TaggedTable.discoveryIdFk ={$discoveryId} ;";
         $query = $this->db->query($query_text);
         return $query->getResult();
@@ -115,22 +105,16 @@ WHERE a20ux1.LikedTable.discoveryIdFk = '{$discoId}';";
     }
 
     public function upload_comment($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "INSERT INTO a20ux1.CommentsTable (commentedByUserIdFk, discoveryIdFk, comment) VALUES ('{$data['userId']}', '{$data['discoId']}', '{$data['comment']}');";
         $this->db->query($query_text);
     }
 
     public function send_like($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "INSERT INTO a20ux1.LikedTable (likedByUserIdFk, discoveryIdFk) VALUES ('{$data['likedByUserIdFk']}', '{$data['discoveryIdFk']}');";
         $this->db->query($query_text);
     }
 
     public function remove_like($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = {$data['likedByUserIdFk']} AND a20ux1.LikedTable.discoveryIdFk = {$data['discoveryIdFk']};";
         $this->db->query($query_text);
     }

@@ -3,8 +3,16 @@
 use CodeIgniter\Controller;
 use App\Models\User_model;
 
-class Login extends Controller
+class Login extends BaseController
 {
+
+    private $user_model;
+
+    public function __construct()
+    {
+        $this->user_model = new User_model();
+    }
+
     public function index()
     {
         helper(['form']);
@@ -14,12 +22,11 @@ class Login extends Controller
     public function auth2()
     {
         $session = session();
-        $model = new User_model();
 
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
 
-        $data = $model->where('userName', $username)->first();
+        $data = $user_model->where('userName', $username)->first();
 
         if($data){
             $pass = $data['passHash'];
@@ -52,15 +59,12 @@ class Login extends Controller
             'emailaddress' => $this->JSON_DATA['my_email'],
             'password' => $this->JSON_DATA['my_password']
         ];
-        
-
     }
 
     public function logout()
     {
         $session = session();
         $session->destroy();
-//        return redirect()->to('/public/login');
         echo "Logged out successfully";
     }
 }

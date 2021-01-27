@@ -6,57 +6,56 @@ use App\Models\User_model;
 /*use App\Models\Tags_model;
 use App\Models\Badges_model;*/
 
-class Profile extends Controller
+class Profile extends BaseController
 {
+    private $discovery_model;
+    private $user_model;
+
+    public function __construct()
+    {
+        $this->discovery_model = new Discovery_model();
+        $this->user_model = new User_model();
+    }
 
     public function getOwnDiscoveries(){
-        $model = new Discovery_model();
+
         $session = session();
         $id = $session->get('userId');
 
-        $data = $model->get_user_discoveries($id);
-        //$data = $model->where('userIdFk', '.$id.');
+        $data = $discovery_model->get_user_discoveries($id);
         echo json_encode($data);
     }
     
     public function getUserDiscoveries(){
-        $model = new Discovery_model();
         $userId = $this->request->getVar('data');
-        $data = $model->get_user_discoveries($userId);
+        $data = $discovery_model->get_user_discoveries($userId);
         return $this->response->setJSON($data);
         
     }
 
     public function getTaggedDiscoveries(){
-        $model = new Discovery_model();
         $session = session();
         $id = $session->get('userId');
 
-        $data = $model->get_tagged_discoveries($id);
+        $data = $discovery_model->get_tagged_discoveries($id);
         echo json_encode($data);
     }
 
     public function getFetchedUserData(){
-        $model = new User_model();
-
         $_POST = json_decode($_POST['data'], true);
         $userId = $_POST['userId'];
 
         // get user's data from database
-        $data = $model->getCurrentData($userId);
+        $data = $user_model->getCurrentData($userId);
 
         echo json_encode($data);
     }
 
     public function getCurrentUserData(){
-        $model = new User_model();
-
         $session = session();
         $userId = $session->get('userId');
 
-        // get user's data from database
-        // $data = $model->find($userId);
-        $data = $model->getCurrentData($userId);
+        $data = $user_model->getCurrentData($userId);
 
         echo json_encode($data);
     }
@@ -72,7 +71,6 @@ class Profile extends Controller
     public function updateProfile()
     {
         $session = session();
-        $model = new User_model();
 
         $_POST = json_decode($_POST['data'],true);
         $userId = $session->get('userId');
@@ -83,7 +81,7 @@ class Profile extends Controller
             'emailAddress'  => $_POST['emailAddress'],
             'avatar'        => $_POST['avatar'],
         ];
-        $model->save($newData);
+        $user_model->save($newData);
 
         return "Profile successfully updated";
     }
@@ -91,13 +89,12 @@ class Profile extends Controller
     public function updatePassword()
     {
         $session = session();
-        $model = new User_model();
 
         $_POST = json_decode($_POST['data'],true);
         $userId = $session->get('userId');
         $password = $_POST['password'];
 
-        $data = $model->where('userId', $userId)->first();
+        $data = $user_model->where('userId', $userId)->first();
 
         $pass = $data['passHash'];
         $verify_pass = password_verify($password, $pass);
@@ -107,7 +104,7 @@ class Profile extends Controller
                 'userId' => $userId,
                 'passHash' => $_POST['newPassword'],
             ];
-            $model->save($newData);
+            $user_model->save($newData);
 
             return "Password successfully updated";
         }

@@ -7,7 +7,6 @@ use App\Models\Badge_model;
 class BadgeController extends Controller
 {
     private $badge_model;
-    //private $userId = 130;
 
     public function __construct()
     {

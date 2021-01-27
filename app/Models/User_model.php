@@ -35,8 +35,6 @@ class User_model extends Model{
     
 
     public function check_email($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "SELECT a20ux1.UserTable.emailAddress FROM a20ux1.UserTable WHERE a20ux1.UserTable.emailAddress = '{$data}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
@@ -44,38 +42,29 @@ class User_model extends Model{
     }
 
     public function saveDaysToDb($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "INSERT INTO a20ux1.ReminderTable (userIdFk, day) VALUES ('{$data['userId']}', '{$data['day']}');";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function saveToDb($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "INSERT INTO a20ux1.UserTable (userName, emailAddress, passHash, useLocation, creationDate) VALUES ('{$data['userName']}', '{$data['emailAddress']}', '{$data['password']}', {$data['location']}, now());";
         $this->db->query($query_text);
     }
 
     public function getUserId($data){
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "SELECT a20ux1.UserTable.userId FROM a20ux1.UserTable WHERE a20ux1.UserTable.emailAddress = '{$data['emailAddress']}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function login($data) {
-        $session = \Config\Services::session();
-        $session->get('ses_data');
         $query_text = "SELECT a20ux1.UserTable.userId, a20ux1.UserTable.userName, a20ux1.UserTable.passHash FROM a20ux1.UserTable WHERE a20ux1.UserTable.emailAddress = '{$data['email']}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
 
     public function getCurrentData($id){
-        $this->db = \Config\Database::connect();
         $query_text = "SELECT a20ux1.UserTable.userId, a20ux1.UserTable.userName, a20ux1.UserTable.emailAddress, a20ux1.UserTable.avatar FROM a20ux1.UserTable WHERE userId = '{$id}';";
         $query = $this->db->query($query_text);
         return $query->getResult();
