@@ -26,7 +26,7 @@ class Map_model extends Model
     }
 
     public function get_popular_discoveries() {
-        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.DiscoveryTable INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE discoveryId IN (SELECT discoveryIdFk FROM a20ux1.LikedTable GROUP BY discoveryIdFk HAVING count(*)>1) AND DATE_ADD(takenDate, INTERVAL 30 DAY) >= current_timestamp() AND a20ux1.UserTable.useLocation=1 AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude;";
+        $query_text = "SELECT a20ux1.DiscoveryTable.discoveryId, a20ux1.DiscoveryTable.takenDate, a20ux1.DiscoveryTable.Longitude, a20ux1.DiscoveryTable.Latitude, a20ux1.DiscoveryTable.title, a20ux1.DiscoveryTable.location, a20ux1.UserTable.userName FROM a20ux1.LikedTable INNER JOIN a20ux1.DiscoveryTable ON a20ux1.LikedTable.discoveryIdFk = a20ux1.DiscoveryTable.discoveryId INNER JOIN a20ux1.UserTable ON a20ux1.DiscoveryTable.userIdFk = a20ux1.UserTable.userId WHERE DATE_ADD(a20ux1.DiscoveryTable.takenDate, INTERVAL 7 DAY) >= current_timestamp() AND a20ux1.UserTable.useLocation=1 AND a20ux1.DiscoveryTable.Longitude AND a20ux1.DiscoveryTable.Latitude GROUP BY a20ux1.LikedTable.discoveryIdFk HAVING count(*)>=1 ORDER BY count(*) DESC LIMIT 10;";
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
