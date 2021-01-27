@@ -22,13 +22,13 @@ class Profile extends BaseController
         $session = session();
         $id = $session->get('userId');
 
-        $data = $discovery_model->get_user_discoveries($id);
+        $data = $this->discovery_model->get_user_discoveries($id);
         echo json_encode($data);
     }
     
     public function getUserDiscoveries(){
         $userId = $this->request->getVar('data');
-        $data = $discovery_model->get_user_discoveries($userId);
+        $data = $this->discovery_model->get_user_discoveries($userId);
         return $this->response->setJSON($data);
         
     }
@@ -37,7 +37,7 @@ class Profile extends BaseController
         $session = session();
         $id = $session->get('userId');
 
-        $data = $discovery_model->get_tagged_discoveries($id);
+        $data = $this->discovery_model->get_tagged_discoveries($id);
         echo json_encode($data);
     }
 
@@ -46,7 +46,7 @@ class Profile extends BaseController
         $userId = $_POST['userId'];
 
         // get user's data from database
-        $data = $user_model->getCurrentData($userId);
+        $data = $this->user_model->getCurrentData($userId);
 
         echo json_encode($data);
     }
@@ -55,7 +55,7 @@ class Profile extends BaseController
         $session = session();
         $userId = $session->get('userId');
 
-        $data = $user_model->getCurrentData($userId);
+        $data = $this->user_model->getCurrentData($userId);
 
         echo json_encode($data);
     }
@@ -81,7 +81,7 @@ class Profile extends BaseController
             'emailAddress'  => $_POST['emailAddress'],
             'avatar'        => $_POST['avatar'],
         ];
-        $user_model->save($newData);
+        $this->user_model->save($newData);
 
         return "Profile successfully updated";
     }
@@ -94,7 +94,7 @@ class Profile extends BaseController
         $userId = $session->get('userId');
         $password = $_POST['password'];
 
-        $data = $user_model->where('userId', $userId)->first();
+        $data = $this->user_model->where('userId', $userId)->first();
 
         $pass = $data['passHash'];
         $verify_pass = password_verify($password, $pass);
@@ -104,7 +104,7 @@ class Profile extends BaseController
                 'userId' => $userId,
                 'passHash' => $_POST['newPassword'],
             ];
-            $user_model->save($newData);
+            $this->user_model->save($newData);
 
             return "Password successfully updated";
         }
