@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Friends_model;
 
 class Friends extends BaseController
+
 {
     private $friends_model;
 

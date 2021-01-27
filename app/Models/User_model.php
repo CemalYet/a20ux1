@@ -69,4 +69,18 @@ class User_model extends Model{
         $query = $this->db->query($query_text);
         return $query->getResult();
     }
+    
+    public function change_rem($data){
+        $session = \Config\Services::session();
+        $session->get('ses_data');
+        $query_text = "INSERT INTO a20ux1.ReminderTable (userIdFk, day) VALUES ('{$data['userId']}', '{$data['day']}');";
+        $this->db->query($query_text);
+    }
+
+    public function delete_rem($data){
+        $session = \Config\Services::session();
+        $session->get('ses_data');
+        $query_text = "DELETE FROM a20ux1.ReminderTable WHERE (userIdFk = '{$data['id']}')";
+        $this->db->query($query_text);
+    }
 }

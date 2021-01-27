@@ -89,4 +89,19 @@ class Register extends \CodeIgniter\Controller
         }
     }
 
+    public function changeReminders() {
+        $data = [
+            'days'         => $this->JSON_DATA['my_days'],
+            'id'           => $this->JSON_DATA['my_id']
+        ];
+        $this->user_model->delete_rem($data);
+        foreach($data['days'] as $value){
+            $insertData = [
+                'userId'    => $data['id'],
+                'day'       => $value
+            ];
+            $this->user_model->change_rem($insertData);
+        }
+    }
+
 }
