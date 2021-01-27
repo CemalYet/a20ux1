@@ -20,6 +20,6 @@ class Home extends \CodeIgniter\Controller
 
     public function home() {
 
-        return view('index');
+        return view('index.html');
     }
 }

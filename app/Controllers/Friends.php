@@ -8,15 +8,18 @@ use App\Models\Friends_model;
 
 class Friends extends BaseController
 
-//TODO create constructor:create friends modal and session  in the constructor
 {
+    private $model;
+    public function __construct()
+    {
+        $this->model = new Friends_model();
+    }
+
     public function getFriends()
     {
         $session = session();
-        $model = new Friends_model();
-
         $userId = $session->get('userId');
-        $data = $model->get_friends($userId);
+        $data = $this->model->get_friends($userId);
 
         echo json_encode($data);
     }
@@ -31,8 +34,7 @@ class Friends extends BaseController
         $_POST = json_decode($_POST['data'], true);
         $search_string = $_POST['search_string'];
 
-        $model = new Friends_model();
-        $data = $model->search($userId, $search_string);
+        $data = $this->model->search($userId, $search_string);
 
         echo json_encode($data);
     }
@@ -47,8 +49,7 @@ class Friends extends BaseController
         $_POST = json_decode($_POST['data'], true);
         $userId_2 = $_POST['userId_2'];
 
-        $model = new Friends_model();
-        $model->add_friend($userId_1, $userId_2);
+        $this->model->add_friend($userId_1, $userId_2);
 
         return "Friend request sent.";
     }
@@ -60,7 +61,7 @@ class Friends extends BaseController
         $userId_2 = $session->get('userId');
 
         $model = new Friends_model();
-        $data = $model->get_friend_request($userId_2);
+        $data = $this->model->get_friend_request($userId_2);
 
         echo json_encode($data);
     }
@@ -70,7 +71,7 @@ class Friends extends BaseController
         $userId = $session->get('userId');
 
         $model = new Friends_model();
-        $data = $model->getFriendRequestNotifications($userId);
+        $data = $this->model->getFriendRequestNotifications($userId);
 
         echo json_encode($data);
     }
@@ -86,8 +87,7 @@ class Friends extends BaseController
         $_POST = json_decode($_POST['data'], true);
         $userId_1 = $_POST['userId_1'];
 
-        $model = new Friends_model();
-        $model->accept_friend_request($userId_1, $userId_2);
+        $this->model->accept_friend_request($userId_1, $userId_2);
 
         return "Friend request accepted.";
     }
@@ -103,8 +103,7 @@ class Friends extends BaseController
         $_POST = json_decode($_POST['data'], true);
         $userB = $_POST['userId'];
 
-        $model = new Friends_model();
-        $model->unfriend($userA, $userB);
+        $this->model->unfriend($userA, $userB);
 
         return "Unfriending was successful.";
     }
