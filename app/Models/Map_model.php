@@ -6,7 +6,6 @@ use CodeIgniter\Model;
 
 class Map_model extends Model
 {
-    private $userId;
 
     public function __construct()
     {

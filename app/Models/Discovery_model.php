@@ -115,7 +115,7 @@ WHERE a20ux1.LikedTable.discoveryIdFk = '{$discoId}';";
     }
 
     public function remove_like($data){
-        $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = {$data['likedByUserIdFk']} AND a20ux1.LikedTable.discoveryIdFk = {$data['discoveryIdFk']};";
+        $query_text = "DELETE FROM a20ux1.LikedTable WHERE a20ux1.LikedTable.likedByUserIdFk = '{$data['likedByUserIdFk']}' AND a20ux1.LikedTable.discoveryIdFk = '{$data['discoveryIdFk']}';";
         $this->db->query($query_text);
     }
 

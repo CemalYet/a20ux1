@@ -84,6 +84,6 @@ class Discovery extends BaseController
             'userId'    => $session->get('userId')
         ];
         $data = $this->discovery_model->get_heart_button($ids);
-        echo $data;
+        return $data[0]->likedByUserIdFk;
     }
 }
